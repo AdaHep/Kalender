@@ -23,11 +23,26 @@
 
 .sidebar-todo-headline {
     width: 100%;
-    height: 2.5rem;
     background-color: darksalmon;
-    padding-left: 0.5rem;
+    font-size: 3rem;
 }
 
 .sidebar-todo-headline > i {
     font-size: 2rem;
+}
+
+.todo-item {
+    width: 90%;
+    background-color: deeppink;
+    margin: 0 1rem 0 1rem;
+    padding: .5rem 0 .5rem 0;
+}
+
+.todo-item-icons > i {
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.todo-info > h5 {
+    font-size: 1.2rem;
 }
