@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.calendar-container{
+    flex-grow: 1;
+}
+.calendar{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 2rem repeat(4,1fr);
+    height: 100vh;
+}
