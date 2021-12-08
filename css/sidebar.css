@@ -22,5 +22,12 @@
 }
 
 .sidebar-todo-headline {
-    
+    width: 100%;
+    height: 2.5rem;
+    background-color: darksalmon;
+    padding-left: 0.5rem;
+}
+
+.sidebar-todo-headline > i {
+    font-size: 2rem;
 }
