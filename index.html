@@ -27,6 +27,7 @@
     <script src="js/daycard.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/sidebar.js"></script>
 
 </head>
 
@@ -47,8 +48,11 @@
     <main class="flex">
         <div class="sidebar">
             <div class="day-info text-center">
-                <p>Dagen</p>
-                <p>Tiden</p>
+                <div class="date-clock align-center flex">
+                    <p id="clock"></p>
+                    <p id="date"></p>
+
+                </div>
                 <p>Vädret</p>
             </div>
             <div class="sidebar-todo">
