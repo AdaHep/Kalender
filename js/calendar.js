@@ -21,17 +21,17 @@ function renderCalendar(date) {
 /** Class keeping track of html and events of a day card. */
 class DayCard {
     /**
-     * Create new day card and render it to calendar
-     * @param {boolean} active - Is in current month
+     * Create new day card and render it to calendar.
+     * @param {boolean} active - Is in current month.
      */
     constructor(active = true) {
 
     }
     /**
      * Add event to day.
-     * @param {Event} event 
+     * @param {Todo} todo
      */
-    addEvent(event){
+    addTodo(todo){
 
     }
     /**
