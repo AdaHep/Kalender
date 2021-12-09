@@ -16,7 +16,11 @@ class Calendar {
             dayCards.push(new DayCard(i >= firstMon));
         }
     }
-    getTodos(year, month, day) {
-        return this.data.magicGet(year).magicGet(month).magicGet(day);
+    getTodos(date) {
+        let { year: year, month: month, dateNum: date } = date.extract();
+        return this.data.magicGet(year).magicGet(month).magicGet(dateNum);
+    }
+    addTodo(date) {
+
     }
 }
