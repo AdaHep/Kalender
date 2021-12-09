@@ -27,3 +27,16 @@ Date.prototype.getFirstOfDay = function (day) {
     var d = new Date(this.getFullYear(), this.getMonth(), 1);
     return (day - d.getDay()) % 7; //TODO: Plus or minus 1 or something? Should it be %6?
 }
+
+/**
+ * Get this[key]. If empty, set to def before returning.
+ * @param {number} key - Index.
+ * @param {*} [def=new this.constructor()] - Default value to add if this[i] is empty.
+ * @returns {*} - this[key] or def
+ */
+ Object.prototype.magicGet = function (key, def = new this.constructor()) {
+    if (this[key] === undefined) {
+        this[key] = def;
+    }
+    return this[key];
+}
