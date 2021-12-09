@@ -23,7 +23,8 @@
 
 
     <!-- JS -->
-    
+    <script src="js/calendar.js"></script>
+    <script src="js.todo.js"></script>
 
 </head>
 
@@ -69,8 +70,9 @@
         </div>
         <div class="calendar-container">
             <div class="month"><i class="fa-solid fa-circle-chevron-left"></i>December<i
-                    class="fa-solid fa-circle-chevron-right"></i></div>
-            <div class="calendar">
+                    class="fa-solid fa-circle-chevron-right"></i>
+            </div>
+            <div class="day-names flex">
                 <div class="day-name">Måndag</div>
                 <div class="day-name">Tisdag</div>
                 <div class="day-name">Onsdag</div>
@@ -113,7 +115,11 @@
                     <div class="day-card-bottom flex justify-center">
                         <p id="holiday">Juldagen</p>
                     </div>
-
+            </div>
+            <div class="calendar" id="calArea">
+                <div class="red day-card">
+                    <div class="date-number">1</div>
+                    <div class="calendar-todo">5</div>
                 </div>
                 
             </div>

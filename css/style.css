@@ -9,9 +9,10 @@
 .calendar{
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    grid-template-rows: 2rem repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
     height: 100vh;
 }
+
 
 .day-card {
     background: #E0E0E0;
@@ -57,3 +58,11 @@
     font-size: 2.5rem;
     color: red;
 } */
+
+.day-name{
+    background-color: rgb(163, 198, 231);
+    color: rgb(43, 53, 80);
+    text-align: center;
+    flex-grow: 1;
+}
+
