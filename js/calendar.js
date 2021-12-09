@@ -1,23 +1,26 @@
-let selectedDate= new Date();
+let selectedDate = new Date();
+let allTime = [];
 // GENERATE CALENDAR
 let calArea = document.getElementById('calArea');
-let dayCards;
 
 /**
  * Render month containing selected date.
  */
 function renderCalendar() {
-    dayCards = [];
-    let length = selectedDate.monthDays();
+    let dayCards;
+    let year = selectedDate.getFullYear(), month = selectedDate.getMonth();
+    
+
+    /* let length = selectedDate.monthDays();
     let firstMon = selectedDate.getFirstOfDay(1);
     for (let i = 0; i < firstMon + length; i++) {
         dayCards.push(new DayCard(i >= firstMon));
-    }
+    } */
 
 }
 
 
-/** Class keeping track of html and events of a day card. */
+/** Class keeping track of html and todos of a day card. */
 class DayCard {
     /**
      * Create new day card and render it to calendar.
@@ -30,13 +33,13 @@ class DayCard {
      * Add event to day.
      * @param {Todo} todo
      */
-    addTodo(todo){
+    addTodo(todo) {
 
     }
     /**
      * Update html according to card data.
      */
-    refresh(){
+    refresh() {
 
     }
 }
