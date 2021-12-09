@@ -1,16 +1,15 @@
-
+let selectedDate= new Date();
 // GENERATE CALENDAR
 let calArea = document.getElementById('calArea');
 let dayCards;
 
 /**
  * Render month containing selected date.
- * @param {Date} date - Selected date.
  */
-function renderCalendar(date) {
+function renderCalendar() {
     dayCards = [];
-    let length = date.monthDays();
-    let firstMon = date.getFirstOfDay(1);
+    let length = selectedDate.monthDays();
+    let firstMon = selectedDate.getFirstOfDay(1);
     for (let i = 0; i < firstMon + length; i++) {
         dayCards.push(new DayCard(i >= firstMon));
     }
