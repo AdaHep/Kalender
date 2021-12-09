@@ -12,3 +12,48 @@
     grid-template-rows: 2rem repeat(4,1fr);
     height: 100vh;
 }
+
+.day-card {
+    background: #E0E0E0;
+    border: 3px solid #A5A5A5;
+}
+
+.day-card-top {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#day-card-date {
+    font-size: 5rem;
+}
+
+.day-card-todo {
+    background: #9F8566 60%;
+    border-radius: 100rem;
+    margin-top: 1rem;
+}
+
+#todo-notification {
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 2.5rem;
+}
+
+.selected {
+    background: #B7B7B7;
+    border: 3px solid #696868;
+}
+
+.holiday > .day-card-top > .date-number > p {
+    color: red;
+}
+
+.holiday >.day-card-bottom > p {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: red;
+}
+
+/* #holiday {
+    font-size: 2.5rem;
+    color: red;
+} */
