@@ -6,7 +6,8 @@ class Todo {
      * Add new todo to date.
      * @param {Date} date - Date and time of todo.
      */
-    constructor(date = selectedDate) {
+    constructor(name, date = selectedDate) {
+        this.name = name;
         this.date = date;
     }
     /**
@@ -25,7 +26,11 @@ class Todo {
     /**
      * Delete todo, clean up and refresh calender view.
      */
-    delete(){
+    delete() {
 
     }
+}
+
+Todo.compare = function (todo0, todo1) {
+    return todo0.date.getTime() - todo1.date.getTime();
 }
