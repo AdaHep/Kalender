@@ -9,17 +9,20 @@ class DayCard {
             '<div id="' + id + '" class="day-card">' +
             '   <div class="day-card-top flex space-between">' +
             '       <div class="date-number">' +
-            '           <p id="day-card-date">1</p>' +
+            '           <p id="day-card-date">'+date.getDate()+'</p>' +
             '       </div>' +
             '       <div class="day-card-todo">' +
             '           <p id="todo-notification">3</p>' +
-            '       </div >'+
-            '   </div >'+
+            '       </div >' +
+            '   </div >' +
             '</div>'
         );
         this.htmlElement = document.getElementById(id);
 
 
+    }
+    select() {
+        this.htmlElement.classList.add('selected')
     }
     /**
      * Add event to day.

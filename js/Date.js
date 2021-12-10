@@ -14,7 +14,7 @@ Date.prototype.getMonthDays = function () {
 Date.prototype.getFirstOfDay = function (day) {
     //Create Date object for first day of month
     var d = new Date(this.getFullYear(), this.getMonth(), 1);
-    return (day - d.getDay()) % 7; //TODO: Plus or minus 1 or something? Should it be %6?
+    return (day - d.getDay() + 7) % 7; //+7 necassary to avoid nedagtive numbers
 }
 
 
@@ -24,7 +24,7 @@ Date.prototype.extract = function () {
         month: this.getMonth(),
         date: this.getDate(),
         day: this.getDay(),
-        hour:this.getHours(),
-        minutes:this.getMinutes()
+        hour: this.getHours(),
+        minutes: this.getMinutes()
     };
 }
