@@ -4,7 +4,7 @@ window.onload=function(){
     let allTime = [];
     // GENERATE CALENDAR
     let calArea = document.getElementById('calArea');
-    let calendar = new Calendar();
+    let calendar = new Calendar(calArea);
     calendar.render(selectedDate);
 }
 

@@ -13,8 +13,13 @@ Date.prototype.getMonthDays = function () {
  */
 Date.prototype.getFirstOfDay = function (day) {
     //Create Date object for first day of month
-    var d = new Date(this.getFullYear(), this.getMonth(), 1);
+    let d = new Date(this.getFullYear(), this.getMonth(), 1);
     return (day - d.getDay() + 7) % 7; //+7 necassary to avoid nedagtive numbers
+}
+
+Date.prototype.getDayOfDate=function(dateNum){
+    let d = new Date(this.getFullYear(), this.getMonth(), dateNum);
+    return d.getDay();
 }
 
 

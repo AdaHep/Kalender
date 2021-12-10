@@ -1,23 +1,27 @@
 class Calendar {
-    constructor() {
+    constructor(calArea) {
+        this.calArea = calArea;
         this.data = [];
     }
     /**
      * Render month containing selected date.
      */
     render(selectedDate) {
+
         let dayCards = [];
         let { year: year, month: month, date: selectedDay } = selectedDate.extract();
-        let length = selectedDate.getMonthDays();
-        let firstMon = selectedDate.getFirstOfDay(1);
+        let length = selectedDate.getMonthDays() + 1;
+        let firstDay = selectedDate.getDayOfDate(1);
         //Clone selectedDate for iteration
         let itDate = new Date(selectedDate);
-
-        for (let i = -firstMon; i < length; i++) {
+        for (let i = 1; i < firstDay; i++) {
+            this.calArea.insertAdjacentHTML('beforeend','<div class="empty-card"></div>');
+        }
+        for (let i = 1; i < length; i++) {
             itDate.setDate(i);
             let card = new DayCard(itDate, 'day' + i);
             dayCards.push(card);
-            if(i===selectedDay){
+            if (i === selectedDay) {
                 card.select();
             }
         }
