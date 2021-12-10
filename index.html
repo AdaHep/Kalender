@@ -23,6 +23,7 @@
 
 
     <!-- JS -->
+    <script defer src="./js/menu.js"></script>
 
 
 </head>
@@ -50,7 +51,7 @@
             </div>
             <div class="sidebar-todo">
                 <div class="sidebar-todo-headline flex space-around align-center">
-                    <i class="fas fa-list"></i>
+                    <i class="fas fa-list" id="calendar-btn"></i>
                     <p>To do</p>
                     <i class="fas fa-plus"></i>
                 </div>
@@ -67,11 +68,11 @@
                 </div>
             </div>
         </div>
-        <div class="calendar-container">
+        <div class="calendar-container" id="calendarContainer">
             <div class="month"><i class="fa-solid fa-circle-chevron-left"></i>December<i
                     class="fa-solid fa-circle-chevron-right"></i>
             </div>
-            <div class="day-names flex">
+            <div class="day-names flex" id="dayNames">
                 <div class="day-name">Måndag</div>
                 <div class="day-name">Tisdag</div>
                 <div class="day-name">Onsdag</div>
@@ -110,6 +111,7 @@
                 <div class="red"></div>
                 <div class="red"></div>
                 <div class="red"></div>
+                <i class="fas fa-times close-btn" id="hide"></i>
             </div>
         </div>
     </main>

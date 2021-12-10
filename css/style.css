@@ -18,3 +18,30 @@
     text-align: center;
     flex-grow: 1;
 }
+
+@media screen and (max-width:768px) {
+    .calendar{
+        display: none;
+        position: absolute;
+        width: 100%;
+    }
+
+    #calendar-btn{
+        cursor: pointer;
+    }
+
+    .show{
+        position: absolute;
+        display: grid;
+        transition: 3s;
+    }
+
+    .close-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        cursor: pointer;
+    }
+}
+

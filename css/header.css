@@ -3,3 +3,10 @@
     font-size: 2.5rem;
     background: rgb(207, 206, 206);
 }
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        position: relative;
+        width: 100%;
+    }
+}
