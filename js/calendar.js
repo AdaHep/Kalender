@@ -5,8 +5,8 @@ class Calendar {
     /**
      * Render month containing selected date.
      */
-    render() {
-        let dayCards;
+    render(selectedDate) {
+        let dayCards = [];
         let { year: year, month: month, date: selectedDay } = selectedDate.extract();
         let length = selectedDate.getMonthDays();
         let firstMon = selectedDate.getFirstOfDay(1);
@@ -15,9 +15,9 @@ class Calendar {
 
         for (let i = -firstMon; i < length; i++) {
             itDate.setDate(i);
-            let card = new DayCard(itDate);
+            let card = new DayCard(itDate, i);
             dayCards.push(card);
-            card.render();
+            
         }
     }
     getTodos(date) {

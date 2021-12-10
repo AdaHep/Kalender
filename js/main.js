@@ -1,8 +1,12 @@
-let selectedDate = new Date();
-let allTime = [];
-// GENERATE CALENDAR
-let calArea = document.getElementById('calArea');
-
+window.onload=function(){
+    
+    let selectedDate = new Date();
+    let allTime = [];
+    // GENERATE CALENDAR
+    let calArea = document.getElementById('calArea');
+    let calendar = new Calendar();
+    calendar.render(selectedDate);
+}
 
 
 

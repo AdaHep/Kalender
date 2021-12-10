@@ -4,8 +4,22 @@ class DayCard {
      * Create new day card and render it to calendar.
      * @param {boolean} active - Is in current month.
      */
-    constructor(date) {
-        
+    constructor(date, id) {
+        calArea.insertAdjacentHTML('beforeend',
+            '<div id="' + id + '" class="day-card">' +
+            '   <div class="day-card-top flex space-between">' +
+            '       <div class="date-number">' +
+            '           <p id="day-card-date">1</p>' +
+            '       </div>' +
+            '       <div class="day-card-todo">' +
+            '           <p id="todo-notification">3</p>' +
+            '       </div >'+
+            '   </div >'+
+            '</div>'
+        );
+        this.htmlElement = document.getElementById(id);
+
+
     }
     /**
      * Add event to day.
