@@ -34,3 +34,5 @@ class Todo {
 Todo.compare = function (todo0, todo1) {
     return todo0.date.getTime() - todo1.date.getTime();
 }
+
+let t = new Todo('asdfasdgsf')

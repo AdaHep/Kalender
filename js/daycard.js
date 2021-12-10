@@ -4,8 +4,8 @@ class DayCard {
      * Create new day card and render it to calendar.
      * @param {boolean} active - Is in current month.
      */
-    constructor(active = true) {
-
+    constructor(date) {
+        
     }
     /**
      * Add event to day.
