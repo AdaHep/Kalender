@@ -5,6 +5,7 @@ class DayCard {
      * @param {boolean} active - Is in current month.
      */
     constructor(date, id, numOfTodos=0) {
+        this.date=date;
         calArea.insertAdjacentHTML('beforeend',
             '<div id="' + id + '" class="day-card">' +
             '   <div class="day-card-top flex space-between">' +
