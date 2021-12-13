@@ -68,4 +68,7 @@
         position: absolute;
         width: 100%;
     }
+    .day-names{
+        display: none;
+    }
 }
