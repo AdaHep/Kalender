@@ -23,8 +23,17 @@
 
 
     <!-- JS -->
+<<<<<<< HEAD
     <script defer src="./js/menu.js"></script>
 
+=======
+    <script src="js/Date.js"></script>
+    <script src="js/Calendar.js"></script>
+    <script src="js/daycard.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sidebar.js"></script>
+>>>>>>> 51a6ef585fed3e3cfe3fff01d14fe53163b84b7c
 
 </head>
 
@@ -44,9 +53,12 @@
     <main class="flex">
         <div class="sidebar">
             <div class="day-info text-center">
-                <p>Dagen</p>
-                <p>Tiden</p>
-                <p>Vädret</p>
+                <div class="date-clock align-center flex column">
+                    <p id="date"></p>
+                    <p id="clock"></p>
+                    
+                </div>
+                <!-- <p>Vädret</p> -->
             </div>
             <div class="sidebar-todo">
                 <div class="sidebar-todo-headline flex space-around align-center">
