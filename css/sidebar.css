@@ -10,12 +10,13 @@
     border-top: 1px solid blue;
 }
 
-.date-clock > p {
-    width: 50%;
+#date {
+    font-size: 2.5rem;
 }
 
-.day-info > p {
-    padding: 1rem;
+#clock {
+    font-size: 2rem;
+    padding-bottom: 1rem;
 }
 
 .sidebar-todo {
