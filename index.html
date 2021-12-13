@@ -39,7 +39,6 @@
 
         </div>
     </header>
-    <script src="js/calendar.js"></script>
 
 
     <main class="flex">
@@ -82,9 +81,27 @@
                 <div class="day-name">Söndag</div>
             </div>
             <div class="calendar" id="calArea">
-                <div class="red day-card">
-                    <div class="date-number">1</div>
-                    <div class="calendar-todo">5</div>
+                <div class="day-card">
+                    <div class="day-card-top flex space-between">
+                        <div class="date-number">
+                            <p id="day-card-date">1</p>
+                        </div>
+                        <div class="day-card-todo">
+                            <p id="todo-notification">3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card selected">
+                    <div class="day-card-top flex space-between">
+                        <div class="date-number">
+                            <p id="day-card-date">2</p>
+                        </div>
+                        <div class="day-card-todo">
+                            <p id="todo-notification">3</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="red"></div>
                 <div class="red"></div>
