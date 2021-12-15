@@ -1,9 +1,23 @@
 let calendar;
 let selectedDate = new Date();
+let selectedCard;
+let monthNames = [
+    'Januari',
+    'Februari',
+    'Mars',
+    'April',
+    'Maj',
+    'Juni',
+    'Juli',
+    'Augusti',
+    'September',
+    'Oktober',
+    'November',
+    'December'
+];
 
 
 window.onload=function(){
-    let allTime = [];
     // GENERATE CALENDAR
     let calArea = document.getElementById('calArea');
     calendar = new Calendar(calArea);
