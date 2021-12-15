@@ -14,7 +14,7 @@ class Calendar {
 
         this.calArea.innerHTML = '';
         document.getElementById('month-title').innerHTML = selectedDate.getMonthName() + ' ' + selectedDate.getFullYear();
-        
+
         for (let i = 1; i < firstDay; i++) {
             this.calArea.insertAdjacentHTML('beforeend', '<div class="empty-card"></div>');
         }
@@ -28,6 +28,24 @@ class Calendar {
                 card.select();
             }
         }
+
+        //Set holidays and red days (this is done separately so calendar can be rendered without having to wait for sholiday)
+        fetch('https://sholiday.faboul.se/dagar/v2.1/' + year + '/' + (month + 1))
+            .then((response) => { return response.json(); })
+            .then((data) => {
+                let days = data.dagar;
+                for (let i in days) {
+                    let day = days[i], card = dayCards[i];
+                    let holiday = day.helgdag;
+
+                    if (holiday) {
+                        card.setHoliday(holiday);
+                    }
+                    if (day['röd dag'] == 'Ja') {
+                        card.setRedDay();
+                    }
+                }
+            })
     }
     getTodos(date) {
         let { year: year, month: month, date: dateNum } = date.extract();
