@@ -10,12 +10,12 @@ class Calendar {
         let dayCards = [];
         let { year: year, month: month, date: selectedDay } = selectedDate.extract();
         let length = selectedDate.getMonthDays() + 1;
-        let firstDay = selectedDate.getDayOfDate(1);
+        let firstDay = (selectedDate.getDayOfDate(1) + 6) % 7; //Extra math in order to convert Sun-Mon into Mon-Sun
 
         this.calArea.innerHTML = '';
         document.getElementById('month-title').innerHTML = selectedDate.getMonthName() + ' ' + selectedDate.getFullYear();
 
-        for (let i = 1; i < firstDay; i++) {
+        for (let i = 0; i < firstDay; i++) {
             this.calArea.insertAdjacentHTML('beforeend', '<div class="empty-card"></div>');
         }
         for (let i = 1; i < length; i++) {
@@ -33,6 +33,7 @@ class Calendar {
         fetch('https://sholiday.faboul.se/dagar/v2.1/' + year + '/' + (month + 1))
             .then((response) => { return response.json(); })
             .then((data) => {
+                debugger;
                 let days = data.dagar;
                 for (let i in days) {
                     let day = days[i], card = dayCards[i];

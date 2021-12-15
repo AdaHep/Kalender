@@ -14,7 +14,7 @@ Date.prototype.getMonthDays = function () {
 Date.prototype.getFirstOfDay = function (day) {
     //Create Date object for first day of month
     let d = new Date(this.getFullYear(), this.getMonth(), 1);
-    return (day - d.getDay() + 7) % 7; //+7 necassary to avoid negative numbers
+    return (day - d.getDay() + 7) % 7; //+7 necessary to avoid negative numbers
 }
 /**
  * Get weekday of the dateNumth of current month.
