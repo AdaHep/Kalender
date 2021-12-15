@@ -36,6 +36,16 @@ class DayCard {
     deselect() {
         this.htmlElement.classList.remove('selected');
     }
+
+    setHoliday(holiday) {
+        this.htmlElement.classList.add('holiday');
+        this.htmlElement.insertAdjacentHTML('beforeend', '<div class="day-card-bottom">' + holiday + '</div>');
+    }
+
+    setRedDay() {
+        this.htmlElement.classList.add('red-day');
+    }
+
     /**
      * Add todo to day.
      * @param {Todo} todo
