@@ -7,6 +7,7 @@
     flex-grow: 1;
     margin-left: 1rem;
     margin-right: 1rem;
+    
 }
 
 .month {
@@ -15,8 +16,9 @@
 .calendar{
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    grid-template-rows: repeat(5,1fr);
-    height: 100vh;
+    grid-template-rows: repeat(6,1fr);
+    /* height: 100vh; */
+    min-height: 50rem;
     gap: 1.5px;
 }
 
@@ -66,48 +68,19 @@
     border: 5px solid red;
 }
 
-.holiday > .day-card-top > .date-number > p {
+.holiday >.day-card-bottom > p {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.red-day > .day-card-top > .date-number > p {
     color: red;
 }
 
-.holiday >.day-card-bottom > p {
+.red-day >.day-card-bottom > p {
     margin-top: 1rem;
     font-size: 2.5rem;
     color: red;
 }
 
-
-
-@media screen and (max-width:768px) {
-    .calendar{
-        display: none;
-        position: absolute;
-        width: 100%;
-    }
-
-    #calendar-btn{
-        cursor: pointer;
-    }
-
-    .show{
-        position: absolute;
-        display: grid;
-    }
-
-    .close-btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 4rem;
-        cursor: pointer;
-    }
-}
-
-@media screen and (max-width:346px) {
-    .calendar{
-        position: absolute;
-        width: 50px;
-    }
-
-    
-}

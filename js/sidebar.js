@@ -26,10 +26,12 @@ function sidebarDateClock() {
 }
 
 function currentDate() {
-  let date = document.getElementById("date");
+  let day = document.getElementById("day");
   let days = new Date();
   const options = { weekday: "long" };
   let newDate = new Date().toISOString().slice(0, 10);
+  day.innerHTML = days.toLocaleDateString("se-SE", options) ;
 
-  date.innerHTML = days.toLocaleDateString("se-SE", options) + "<br>" + newDate;
+  let currentDate = document.getElementById("date");
+  currentDate.innerHTML = newDate;
 }
