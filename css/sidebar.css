@@ -1,79 +1,54 @@
 .sidebar {
-    height: 100vh;
-    background-color: burlywood;
+  height: 100vh;
+  background-color: burlywood;
 }
 
 .day-info {
-    font-size: 2rem;
-    width: 100%;
-    background: rgb(207, 206, 206);
-    border-top: 1px solid blue;
+  font-size: 2rem;
+  width: 100%;
+  background: rgb(207, 206, 206);
+  border-top: 1px solid blue;
 }
 
 #date {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 #clock {
-    font-size: 2rem;
-    padding-bottom: 1rem;
+  font-size: 2rem;
+  padding-bottom: 1rem;
 }
 
 .sidebar-todo {
-    width: 100%;
-    height: 15rem;
-    background-color: darkgoldenrod;
+  width: 100%;
+  height: 15rem;
+  background-color: darkgoldenrod;
 }
 
 .sidebar-todo-headline {
-    width: 100%;
-    background-color: darksalmon;
-    font-size: 3rem;
+  width: 100%;
+  background-color: darksalmon;
+  font-size: 3rem;
 }
 
 .sidebar-todo-headline > i {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .todo-item {
-    width: 90%;
-    background-color: deeppink;
-    margin: 0 1rem 0 1rem;
-    padding: .5rem 0 .5rem 0;
+  width: 90%;
+  background-color: deeppink;
+  margin: 0 1rem 0 1rem;
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 .todo-item-icons > i {
-    margin-bottom: .5rem;
-    font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .todo-info > h5 {
-    font-size: 1.2rem;
-    margin-left: .3rem;
-    margin-right: .3rem;
-}
-
-
-
-
-
-@media screen and (max-width: 768px){
-
-    .sidebar{
-        position: absolute;
-        width: 100%;
-    }
-    .calendar-btn{
-        cursor: pointer;
-    }
-}
-
-@media screen and (max-width: 346px) {
-    .sidebar {
-        position: absolute;
-        width: 100%;
-    }
-    .day-names{
-        display: none;
-    }
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }

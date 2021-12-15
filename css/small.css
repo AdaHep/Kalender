@@ -1,0 +1,46 @@
+@media screen and (max-width: 768px) {
+  .header-content {
+    position: relative;
+    width: 100%;
+  }
+  .sidebar {
+    position: absolute;
+    width: 100%;
+  }
+  .calendar-btn {
+    cursor: pointer;
+  }
+  .calendar {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  #calendar-btn {
+    cursor: pointer;
+  }
+  .show {
+    position: absolute;
+    display: grid;
+  }
+  .close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 346px) {
+  .sidebar {
+    position: absolute;
+    width: 100%;
+  }
+  .day-names {
+    display: none;
+  }
+  .calendar {
+    position: absolute;
+    width: 50px;
+  }
+}

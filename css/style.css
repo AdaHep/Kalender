@@ -15,7 +15,7 @@
 .calendar{
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
     height: 100vh;
     gap: 1.5px;
 }
@@ -76,38 +76,3 @@
     color: red;
 }
 
-
-
-@media screen and (max-width:768px) {
-    .calendar{
-        display: none;
-        position: absolute;
-        width: 100%;
-    }
-
-    #calendar-btn{
-        cursor: pointer;
-    }
-
-    .show{
-        position: absolute;
-        display: grid;
-    }
-
-    .close-btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 4rem;
-        cursor: pointer;
-    }
-}
-
-@media screen and (max-width:346px) {
-    .calendar{
-        position: absolute;
-        width: 50px;
-    }
-
-    
-}
