@@ -7,15 +7,18 @@ class Calendar {
      * Render month containing selected date.
      */
     render(selectedDate) {
-
         let dayCards = [];
         let { year: year, month: month, date: selectedDay } = selectedDate.extract();
         let length = selectedDate.getMonthDays() + 1;
         let firstDay = selectedDate.getDayOfDate(1);
         //Clone selectedDate for iteration
         let itDate = new Date(selectedDate);
+
+        this.calArea.innerHTML = '';
+        document.getElementById('month-title').innerHTML = selectedDate.getMonthName() + ' ' + selectedDate.getFullYear();
+
         for (let i = 1; i < firstDay; i++) {
-            this.calArea.insertAdjacentHTML('beforeend','<div class="empty-card"></div>');
+            this.calArea.insertAdjacentHTML('beforeend', '<div class="empty-card"></div>');
         }
         for (let i = 1; i < length; i++) {
             itDate.setDate(i);
