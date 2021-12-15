@@ -31,6 +31,8 @@
     <script src="js/main.js"></script>
     <script src="js/sidebar.js"></script>
 
+    <script src="js/UI.js"></script>
+
 </head>
 
 <body>
@@ -73,8 +75,14 @@
             </div>
         </div>
         <div class="calendar-container" id="calendarContainer">
-            <div class="month"><i class="fa-solid fa-circle-chevron-left"></i>December<i
-                    class="fa-solid fa-circle-chevron-right"></i>
+            <div class="month flex space-around align-center">
+                <div id="previous-month">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </div>
+                <p id="month-title">December</p>
+                <div id="next-month">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </div>
             </div>
             <div class="day-names flex" id="dayNames">
                 <div class="day-name">Måndag</div>

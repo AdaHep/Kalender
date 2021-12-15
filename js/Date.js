@@ -41,3 +41,9 @@ Date.prototype.extract = function () {
         minutes: this.getMinutes()
     };
 }
+
+
+Date.prototype.incrementMonth = function (i){
+    let newMonth = this.getMonth() +i;
+    this.setMonth(newMonth);
+}
