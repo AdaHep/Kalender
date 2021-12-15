@@ -1,11 +1,14 @@
+let calendar;
+let selectedDate = new Date();
+
+
 window.onload=function(){
-    
-    let selectedDate = new Date();
     let allTime = [];
     // GENERATE CALENDAR
     let calArea = document.getElementById('calArea');
-    let calendar = new Calendar(calArea);
+    calendar = new Calendar(calArea);
     calendar.render(selectedDate);
+    changeMonth();
 }
 
 

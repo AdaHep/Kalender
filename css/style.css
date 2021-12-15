@@ -6,6 +6,10 @@
 .calendar-container{
     flex-grow: 1;
 }
+
+.month {
+    font-size: 2rem;
+}
 .calendar{
     display: grid;
     grid-template-columns: repeat(7,1fr);
