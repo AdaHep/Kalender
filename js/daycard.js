@@ -24,6 +24,9 @@ class DayCard {
             this['data-card'].select();
         });
     }
+    /**
+     * Deselect previously selected date and select this one.
+     */
     select() {
         if (selectedCard) selectedCard.deselect();
         selectedCard = this;

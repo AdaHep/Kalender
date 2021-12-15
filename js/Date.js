@@ -14,7 +14,7 @@ Date.prototype.getMonthDays = function () {
 Date.prototype.getFirstOfDay = function (day) {
     //Create Date object for first day of month
     let d = new Date(this.getFullYear(), this.getMonth(), 1);
-    return (day - d.getDay() + 7) % 7; //+7 necassary to avoid nedagtive numbers
+    return (day - d.getDay() + 7) % 7; //+7 necassary to avoid negative numbers
 }
 /**
  * Get weekday of the dateNumth of current month.
@@ -42,7 +42,11 @@ Date.prototype.extract = function () {
     };
 }
 
-
+/**
+ * Increments month by i. Keeps date of month if possible, otherwise sets it to last of new month.
+ * @param {Number} i - Increment.
+ * @returns {Date} This Date object.
+ */
 Date.prototype.incrementMonth = function (i) {
     let date = this.getDate()
     let newMonth = this.getMonth() + i;
@@ -52,9 +56,13 @@ Date.prototype.incrementMonth = function (i) {
     this.setMonth(newMonth);
     //If date is not available for new month, set it to last day instead
     this.setDate(Math.min(date, this.getMonthDays()));
-    return this.getMonth();
+    return this;
 }
 
+/**
+ * Get name of month from monthNames.
+ * @returns {String}
+ */
 Date.prototype.getMonthName = function () {
     return monthNames[this.getMonth()];
 }

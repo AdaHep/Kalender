@@ -30,7 +30,12 @@ class Todo {
 
     }
 }
-
+/**
+ * Compares two Todo objects by time.
+ * @param {Todo} todo0 
+ * @param {Todo} todo1 
+ * @returns {Number} Difference between times.
+ */
 Todo.compare = function (todo0, todo1) {
     return todo0.date.getTime() - todo1.date.getTime();
 }
