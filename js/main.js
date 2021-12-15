@@ -1,5 +1,6 @@
 let calendar;
 let selectedDate = new Date();
+let selectedCard;
 let monthNames = [
     'Januari',
     'Februari',
@@ -15,8 +16,8 @@ let monthNames = [
     'December'
 ];
 
-window.onload = function () {
-    let allTime = [];
+
+window.onload=function(){
     // GENERATE CALENDAR
     let calArea = document.getElementById('calArea');
     calendar = new Calendar(calArea);

@@ -19,17 +19,22 @@ class DayCard {
             '</div>'
         );
         this.htmlElement = document.getElementById(id);
-
-
+        this.htmlElement['data-card'] = this;
+        this.htmlElement.addEventListener('click', function () {
+            this['data-card'].select();
+        });
     }
     select() {
-        this.htmlElement.classList.add('selected')
+        if (selectedCard) selectedCard.deselect();
+        selectedCard = this;
+        selectedDate = this.date;
+        this.htmlElement.classList.add('selected');
     }
     deselect() {
         this.htmlElement.classList.remove('selected');
     }
     /**
-     * Add event to day.
+     * Add todo to day.
      * @param {Todo} todo
      */
     addTodo(todo) {
