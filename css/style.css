@@ -5,6 +5,8 @@
 }
 .calendar-container{
     flex-grow: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .month {
@@ -15,37 +17,53 @@
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(5,1fr);
     height: 100vh;
+    gap: 1.5px;
 }
 
+.day-name{
+    background-color: rgb(163, 198, 231);
+    color: rgb(43, 53, 80);
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: .2rem;
+}
 
 .day-card {
-    background: #E0E0E0;
-    border: 3px solid #A5A5A5;
+    background: #b9b9b9;
 }
 
 .day-card-top {
     margin-left: 1rem;
     margin-right: 1rem;
+    align-items: center;
 }
 
 #day-card-date {
-    font-size: 5rem;
+    font-size: 3.5rem;
 }
 
 .day-card-todo {
-    background: #9F8566 60%;
+    background: #ff6565 60%;
     border-radius: 100rem;
-    margin-top: 1rem;
+    margin-top: .2rem;
+    height: 3rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
 }
 
 #todo-notification {
-    padding: 1rem 2rem 1rem 2rem;
+    padding: .5rem 1rem .5rem 1rem;
     font-size: 2.5rem;
 }
 
-.selected {
-    background: #B7B7B7;
+.current {
+    background: #888888;
     border: 3px solid #696868;
+}
+
+.selected {
+    border: 5px solid red;
 }
 
 .holiday > .day-card-top > .date-number > p {
@@ -59,12 +77,6 @@
 }
 
 
-.day-name{
-    background-color: rgb(163, 198, 231);
-    color: rgb(43, 53, 80);
-    text-align: center;
-    flex-grow: 1;
-}
 
 @media screen and (max-width:768px) {
     .calendar{
