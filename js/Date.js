@@ -21,7 +21,7 @@ Date.prototype.getFirstOfDay = function (day) {
  * @param {number} dateNum 
  * @returns {number} 0-6 for Sunday-Monday.
  */
-Date.prototype.getDayOfDate=function(dateNum){
+Date.prototype.getDayOfDate = function (dateNum) {
     let d = new Date(this.getFullYear(), this.getMonth(), dateNum);
     return d.getDay();
 }
@@ -43,7 +43,18 @@ Date.prototype.extract = function () {
 }
 
 
-Date.prototype.incrementMonth = function (i){
-    let newMonth = this.getMonth() +i;
+Date.prototype.incrementMonth = function (i) {
+    let date = this.getDate()
+    let newMonth = this.getMonth() + i;
+
+    //Temporarily set to first day of month to make sure we end up in the correct month
+    this.setDate(1);
     this.setMonth(newMonth);
+    //If date is not available for new month, set it to last day instead
+    this.setDate(Math.min(date, this.getMonthDays()));
+    return this.getMonth();
+}
+
+Date.prototype.getMonthName = function () {
+    return monthNames[this.getMonth()];
 }

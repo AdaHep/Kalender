@@ -33,7 +33,7 @@ window.onload=function(){
  * @param {*} [def=new this.constructor()] - Default value to add if this[i] is empty.
  * @returns {*} - this[key] or def
  */
- Object.prototype.magicGet = function (key, def = new this.constructor()) {
+Object.prototype.magicGet = function (key, def = new this.constructor()) {
     if (this[key] === undefined) {
         this[key] = def;
     }

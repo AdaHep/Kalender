@@ -4,16 +4,16 @@ class DayCard {
      * Create new day card and render it to calendar.
      * @param {boolean} active - Is in current month.
      */
-    constructor(date, id, numOfTodos=0) {
-        this.date=date;
+    constructor(date, id, numOfTodos = 0) {
+        this.date = date;
         calArea.insertAdjacentHTML('beforeend',
             '<div id="' + id + '" class="day-card">' +
             '   <div class="day-card-top flex space-between">' +
             '       <div class="date-number">' +
-            '           <p id="day-card-date">'+date.getDate()+'</p>' +
+            '           <p id="day-card-date">' + date.getDate() + '</p>' +
             '       </div>' +
             '       <div class="day-card-todo">' +
-            '           <p id="todo-notification">'+numOfTodos+'</p>' +
+            '           <p id="todo-notification">' + numOfTodos + '</p>' +
             '       </div >' +
             '   </div >' +
             '</div>'
@@ -30,7 +30,7 @@ class DayCard {
         selectedDate = this.date;
         this.htmlElement.classList.add('selected');
     }
-    deselect(){
+    deselect() {
         this.htmlElement.classList.remove('selected');
     }
     /**
