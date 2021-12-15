@@ -5,22 +5,63 @@
   }
   .sidebar {
     position: absolute;
-    width: 100%;
+    width: 95%;
   }
+
+  .date-clock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #day {
+    font-size: 2rem;
+  }
+
+
+  .calendar-container {
+    display: none;
+    background: rgb(165, 83, 83);
+    position: absolute;
+    max-width: 100vw;
+  }
+  
   .calendar-btn {
     cursor: pointer;
   }
   .calendar {
-    display: none;
-    position: absolute;
-    width: 100%;
+    width: 95vw;
+    gap: 2px;
   }
+
+  .day-card {
+    max-width: 5.5rem;
+  }
+  #day-card-date {
+    font-size: 2rem;
+  }
+
+  .day-card-todo {
+    background: #ff6565 60%;
+    border-radius: 100rem;
+    margin-top: .2rem;
+    height: 1rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+
+  #todo-notification {
+    padding: .5rem 1rem .5rem 1rem;
+    font-size: 2.5rem;
+  }
+
   #calendar-btn {
     cursor: pointer;
   }
   .show {
     position: absolute;
-    display: grid;
+    display: unset;
   }
   .close-btn {
     display: flex;

@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/sidebar.css">
-
+    <link rel="stylesheet" href="./css/small.css">
+    
     <!-- FONTS & ICONS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,26 +47,27 @@
 
 
     <main class="flex">
-        <div class="sidebar">
-            <div class="day-info text-center">
+        <div class="sidebar flex column align-center">
+            <div class="day-info">
                 <div class="date-clock align-center flex column">
+                    <p id="day"></p>
                     <p id="date"></p>
                     <p id="clock"></p>
                     
                 </div>
                 <!-- <p>Vädret</p> -->
             </div>
-            <div class="sidebar-todo">
-                <div class="sidebar-todo-headline flex space-around align-center">
-                    <i class="fas fa-list" id="calendar-btn"></i>
+            <div class="sidebar-todo flex column align-center">
+                <div class="sidebar-todo-headline flex space-around align-center justify-center">
+                    <i class="fas fa-calendar" id="calendar-btn"></i>
                     <p>To do</p>
                     <i class="fas fa-plus"></i>
                 </div>
                 <div class="todo-item flex space-around">
                     <div class="todo-info flex justify-center column text-center">
+                            <p class="todo-date">2021 - 12 - 24 | Hela dagen</p>
                         <h5>Gratta bengan på 46 års dagen</h5>
 
-                        <p class="date">2021 - 12 - 24 | Hela dagen</p>
                     </div>
                     <div class="todo-item-icons flex column space-around">
                         <i class="fas fa-edit"></i>
