@@ -1,8 +1,21 @@
 let calendar;
 let selectedDate = new Date();
+let monthNames = [
+    'Januari',
+    'Februari',
+    'Mars',
+    'April',
+    'Maj',
+    'Juni',
+    'Juli',
+    'Augusti',
+    'September',
+    'Oktober',
+    'November',
+    'December'
+];
 
-
-window.onload=function(){
+window.onload = function () {
     let allTime = [];
     // GENERATE CALENDAR
     let calArea = document.getElementById('calArea');
@@ -19,7 +32,7 @@ window.onload=function(){
  * @param {*} [def=new this.constructor()] - Default value to add if this[i] is empty.
  * @returns {*} - this[key] or def
  */
- Object.prototype.magicGet = function (key, def = new this.constructor()) {
+Object.prototype.magicGet = function (key, def = new this.constructor()) {
     if (this[key] === undefined) {
         this[key] = def;
     }
