@@ -30,7 +30,7 @@ class Calendar {
         }
 
         this.renderTodos();
-        
+
         //Set holidays and red days (this is done separately so calendar can be rendered without having to wait for sholiday)
         fetch('https://sholiday.faboul.se/dagar/v2.1/' + year + '/' + (month + 1))
             .then((response) => { return response.json(); })
@@ -54,9 +54,9 @@ class Calendar {
         document.getElementById('todolist').innerHTML = '';
         let todos = this.getTodos(selectedDate);
         if (todos) {
-
+            let i = 0;
             for (let todo of todos) {
-                todo.render();
+                todo.render('td' + i++);
             }
         }
     }

@@ -10,22 +10,27 @@ class Todo {
         this.name = name;
         this.date = new Date(date);
     }
-    render() {
+    render(id) {
         const todolist = document.getElementById('todolist');
         let { year: year, month: month, date: dateNum } = this.date.extract();
 
         todolist.insertAdjacentHTML('beforeend',
-            '   <div class="todo-item flex space-around">' +
+            '   <div id="' + id + '" class="todo-item flex space-around">' +
             '       <div class="todo-info flex justify-center column text-center">' +
             '           <p class="todo-date">' + year + ' - ' + (month + 1) + ' - ' + dateNum + ' | Hela dagen</p>' +
             '           <h5>' + this.name + '</h5>' +
             '       </div>' +
             '       <div class="todo-item-icons flex column space-around">' +
-            '           <i class="fas fa-edit"></i>' +
-            '           <i class="far fa-trash-alt"></i>' +
+            '           <i class="far fa-trash-alt btn-delete"></i>' +
             '       </div>' +
             '   </div>'
         );
+        this.htmlElement = document.getElementById(id);
+        this.htmlElement['data-obj'] = this;
+        this.htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click',function(){
+            let todo=this.closest('.todo-item')['data-obj'];
+            todo.delete();
+        });
     }
     /**
      * Open edit menu in UI.
@@ -41,7 +46,7 @@ class Todo {
 
     }
     /**
-     * Delete todo, clean up and refresh calender view.
+     * Delete todo from calendar, clean up and refresh calender view.
      */
     delete() {
 

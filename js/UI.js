@@ -14,8 +14,8 @@ function setEvents() {
 
     btnAddTodo.addEventListener('click', function () {
         let todo = new Todo();
-        todo.render();
         calendar.addTodo(todo);
+        calendar.renderTodos();
     });
 }
 
