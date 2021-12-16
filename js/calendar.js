@@ -29,11 +29,12 @@ class Calendar {
             }
         }
 
+        this.renderTodos();
+        
         //Set holidays and red days (this is done separately so calendar can be rendered without having to wait for sholiday)
         fetch('https://sholiday.faboul.se/dagar/v2.1/' + year + '/' + (month + 1))
             .then((response) => { return response.json(); })
             .then((data) => {
-                debugger;
                 let days = data.dagar;
                 for (let i in days) {
                     let day = days[i], card = dayCards[i];
@@ -48,13 +49,24 @@ class Calendar {
                 }
             })
     }
+    renderTodos() {
+
+        document.getElementById('todolist').innerHTML = '';
+        let todos = this.getTodos(selectedDate);
+        if (todos) {
+
+            for (let todo of todos) {
+                todo.render();
+            }
+        }
+    }
     getTodos(date) {
         let { year: year, month: month, date: dateNum } = date.extract();
-        return this.data.magicGet(year).magicGet(month).magicGet(dateNum); //TODO: Kinda stupid to create all these empty arrays if there's nothing there
+        return this.data.magicGet(year).magicGet(month)[dateNum]; //Last one is ordinary [] in order to prevent incorrect usage such as trying to add stuff to the actual data this way. That is, getTodos is guaranteed to return undefined if there's no array for date.
     }
-    addTodo(todo, date) {
-        let { year: year, month: month, date: dateNum } = date.extract();
-        let todos = this.data.magicGet(year).magicGet(month).magicGet(dateNum);
+    addTodo(todo) {
+        let { year: year, month: month, date: dateNum } = todo.date.extract();
+        let todos = this.data.magicGet(year, true).magicGet(month, true).magicGet(dateNum, true);
         todos.push(todo);
     }
 }

@@ -6,9 +6,26 @@ class Todo {
      * Add new todo to date.
      * @param {Date} date - Date and time of todo.
      */
-    constructor(name, date = selectedDate) {
+    constructor(name = 'Namnlös todo', date = selectedDate) {
         this.name = name;
-        this.date = date;
+        this.date = new Date(date);
+    }
+    render() {
+        const todolist = document.getElementById('todolist');
+        let { year: year, month: month, date: dateNum } = this.date.extract();
+
+        todolist.insertAdjacentHTML('beforeend',
+            '   <div class="todo-item flex space-around">' +
+            '       <div class="todo-info flex justify-center column text-center">' +
+            '           <p class="todo-date">' + year + ' - ' + (month + 1) + ' - ' + dateNum + ' | Hela dagen</p>' +
+            '           <h5>' + this.name + '</h5>' +
+            '       </div>' +
+            '       <div class="todo-item-icons flex column space-around">' +
+            '           <i class="fas fa-edit"></i>' +
+            '           <i class="far fa-trash-alt"></i>' +
+            '       </div>' +
+            '   </div>'
+        );
     }
     /**
      * Open edit menu in UI.

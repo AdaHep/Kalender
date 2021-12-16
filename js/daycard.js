@@ -5,7 +5,7 @@ class DayCard {
      * @param {boolean} active - Is in current month.
      */
     constructor(date, id, numOfTodos = 0) {
-        this.date = date;
+        this.date = new Date(date);
         calArea.insertAdjacentHTML('beforeend',
             '<div id="' + id + '" class="day-card">' +
             '   <div class="day-card-top flex space-between">' +
@@ -32,6 +32,7 @@ class DayCard {
         selectedCard = this;
         selectedDate = this.date;
         this.htmlElement.classList.add('selected');
+        calendar.renderTodos();
     }
     deselect() {
         this.htmlElement.classList.remove('selected');
