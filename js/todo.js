@@ -8,15 +8,17 @@ class Todo {
      */
     constructor(name = 'Namnlös todo', date = selectedDate) {
         this.name = name;
-        this.date = date;
+        this.date = new Date(date);
     }
     render() {
         const todolist = document.getElementById('todolist');
+        let { year: year, month: month, date: dateNum } = this.date.extract();
+
         todolist.insertAdjacentHTML('beforeend',
             '   <div class="todo-item flex space-around">' +
             '       <div class="todo-info flex justify-center column text-center">' +
-            '           <p class="todo-date">2021 - 12 - 24 | Hela dagen</p>' +
-            '           <h5>Gratta bengan på 46 års dagen</h5>' +
+            '           <p class="todo-date">' + year + ' - ' + (month + 1) + ' - ' + dateNum + ' | Hela dagen</p>' +
+            '           <h5>' + this.name + '</h5>' +
             '       </div>' +
             '       <div class="todo-item-icons flex column space-around">' +
             '           <i class="fas fa-edit"></i>' +

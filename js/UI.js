@@ -16,6 +16,6 @@ function setEvents() {
         let todo = new Todo();
         todo.render();
         calendar.addTodo(todo);
-    })
+    });
 }
 
