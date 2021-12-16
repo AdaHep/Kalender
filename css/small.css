@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+  main {
+    justify-content: center;
+  }
+
   .header-content {
     position: relative;
     width: 100%;
@@ -18,12 +22,13 @@
     font-size: 2rem;
   }
 
-
   .calendar-container {
     display: none;
-    background: rgb(165, 83, 83);
+    background: rgb(121, 121, 121);
+    border-radius: 1rem;
     position: absolute;
-    max-width: 100vw;
+    margin: 0;
+    padding: 0.2rem;
   }
   
   .calendar-btn {
@@ -35,25 +40,32 @@
   }
 
   .day-card {
-    max-width: 5.5rem;
+    max-width: 6rem;
+  }
+  
+  .day-card-top {
+    width: 100%;
+    margin-left: unset;
   }
   #day-card-date {
     font-size: 2rem;
+    margin-left: .2rem;
   }
-
+  
   .day-card-todo {
     background: #ff6565 60%;
     border-radius: 100rem;
+    margin-right: .5rem;
     margin-top: .2rem;
-    height: 1rem;
+    height: 2rem;
     display: flex;
     align-content: center;
     align-items: center;
   }
 
   #todo-notification {
-    padding: .5rem 1rem .5rem 1rem;
-    font-size: 2.5rem;
+    padding: .5rem .5rem .5rem .5rem;
+    font-size: 1rem;
   }
 
   #calendar-btn {
@@ -66,10 +78,24 @@
   .close-btn {
     display: flex;
     justify-content: center;
-    align-items: center;
     font-size: 4rem;
     cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    transform: translate(-50%, -50%);
   }
+
+  .selected {
+    border: 2px solid red;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  #calendar-btn {
+    display: none;
+  }
+  
 }
 
 @media screen and (max-width: 346px) {

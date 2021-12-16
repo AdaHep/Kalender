@@ -7,8 +7,11 @@
     flex-grow: 1;
     margin-left: 1rem;
     margin-right: 1rem;
-    
 }
+
+/* #hide {
+    display: none;
+} */
 
 .month {
     font-size: 2rem;
