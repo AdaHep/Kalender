@@ -33,7 +33,6 @@ class Calendar {
         fetch('https://sholiday.faboul.se/dagar/v2.1/' + year + '/' + (month + 1))
             .then((response) => { return response.json(); })
             .then((data) => {
-                debugger;
                 let days = data.dagar;
                 for (let i in days) {
                     let day = days[i], card = dayCards[i];
@@ -52,8 +51,8 @@ class Calendar {
         let { year: year, month: month, date: dateNum } = date.extract();
         return this.data.magicGet(year).magicGet(month).magicGet(dateNum); //TODO: Kinda stupid to create all these empty arrays if there's nothing there
     }
-    addTodo(todo, date) {
-        let { year: year, month: month, date: dateNum } = date.extract();
+    addTodo(todo) {
+        let { year: year, month: month, date: dateNum } = todo.date.extract();
         let todos = this.data.magicGet(year).magicGet(month).magicGet(dateNum);
         todos.push(todo);
     }

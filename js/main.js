@@ -1,7 +1,7 @@
 let calendar;
 let selectedDate = new Date();
 let selectedCard;
-let monthNames = [
+const monthNames = [
     'Januari',
     'Februari',
     'Mars',
@@ -22,7 +22,7 @@ window.onload=function(){
     let calArea = document.getElementById('calArea');
     calendar = new Calendar(calArea);
     calendar.render(selectedDate);
-    changeMonth();
+    setEvents();
 }
 
 

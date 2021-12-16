@@ -1,17 +1,21 @@
-function changeMonth(){
-    const prevMonth = document.getElementById('previous-month');
-    prevMonth.addEventListener('click', function () 
-    {
+function setEvents() {
+    const btnPrevMonth = document.getElementById('previous-month');
+    const btnNextMonth = document.getElementById('next-month');
+    const btnAddTodo = document.getElementById('add-todo-btn');
+
+    btnPrevMonth.addEventListener('click', function () {
         selectedDate.incrementMonth(-1);
         calendar.render(selectedDate);
-    }
-    );
-    const nextMonth = document.getElementById('next-month')
-    nextMonth.addEventListener('click', function()
-    {
+    });
+    btnNextMonth.addEventListener('click', function () {
         selectedDate.incrementMonth(1);
         calendar.render(selectedDate);
-    }
-    );
+    });
+
+    btnAddTodo.addEventListener('click', function () {
+        let todo = new Todo();
+        todo.render();
+        calendar.addTodo(todo);
+    })
 }
 
