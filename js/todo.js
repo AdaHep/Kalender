@@ -27,17 +27,12 @@ class Todo {
         );
         this.htmlElement = document.getElementById(id);
         this.htmlElement['data-obj'] = this;
-        this.htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click',function(){
-            let todo=this.closest('.todo-item')['data-obj'];
+        this.htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
+            let todo = this.closest('.todo-item')['data-obj'];
             todo.delete();
         });
     }
-    /**
-     * Open edit menu in UI.
-     */
-    edit() {
 
-    }
     /**
      * Set date and time of todo.
      * @param {Date} date 
