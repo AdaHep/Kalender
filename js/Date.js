@@ -67,6 +67,11 @@ Date.prototype.getMonthName = function () {
     return monthNames[this.getMonth()];
 }
 
+/**
+ * Quick way to copy multiple attributes from from to this.
+ * @param {Date} from - Date to steal from.
+ * @param {String[]} attribs - Names of get/set methods for attributes, excluding 'get'/'set'.
+ */
 Date.prototype.steal = function (from, attribs) {
     for (let att of attribs) {
         this['set' + att](from['get' + att]());
