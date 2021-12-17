@@ -15,7 +15,7 @@ class Todo {
     render(id, todolist) {
         let { year: year, month: month, date: dateNum, hours: hours, minutes: minutes } = this.date.extract();
         let dateStr = this.isMoving ? 'Välj datum' : year + ' - ' + (month + 1) + ' - ' + dateNum;
-        let timeStr = hours + ':' + minutes;
+        let timeStr = numToStr(hours, 2) + ':' + numToStr(minutes, 2);
         let classes = 'todo-item flex space-around' + (this.isMoving ? ' moving' : '');
 
         todolist.insertAdjacentHTML('beforeend',
