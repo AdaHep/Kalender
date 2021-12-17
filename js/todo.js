@@ -60,7 +60,20 @@ class Todo {
     /**
      * Delete todo from calendar, clean up and refresh calender view.
      */
+
+
     delete() {
+
+        let todos = calendar.getTodos(this.date);
+
+        if (todos === undefined) {
+            throw new Error("No todos for this date");
+        }
+        let index = todos.indexOf(this);
+
+        todos.splice(index, 1);
+
+        calendar.renderTodos();
 
     }
 }
@@ -73,3 +86,4 @@ class Todo {
 Todo.compare = function (todo0, todo1) {
     return todo0.date.getTime() - todo1.date.getTime();
 }
+
