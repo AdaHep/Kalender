@@ -78,6 +78,5 @@ class Calendar {
         let { year: year, month: month, date: dateNum } = todo.date.extract();
         let todos = this.data.magicGet(year, true).magicGet(month, true).magicGet(dateNum, true);
         todos.push(todo);
-        Array.prototype.indexOf()
     }
 }

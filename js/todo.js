@@ -18,7 +18,7 @@ class Todo {
             '   <div id="' + id + '" class="todo-item flex space-around' + (this.isMoving ? ' moving' : '') + '">' +
             '       <div class="todo-info flex justify-center column text-center">' +
             '           <p class="todo-date">' + year + ' - ' + (month + 1) + ' - ' + dateNum + ' | Hela dagen</p>' +
-            '           <h5>' + this.name + '</h5>' +
+            '           <input type="text" class="name" value="' + this.name + '">' +
             '       </div>' +
             '       <div class="todo-item-icons flex column space-around">' +
             '           <i class="far fa-trash-alt btn-delete"></i>' +
@@ -28,6 +28,11 @@ class Todo {
         );
         this.htmlElement = document.getElementById(id);
         this.htmlElement['data-obj'] = this;
+
+        this.htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
+            let todo = this.closest('.todo-item')['data-obj'];
+            todo.name = this.value;
+        })
 
         this.htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
             let todo = this.closest('.todo-item')['data-obj'];
@@ -63,18 +68,13 @@ class Todo {
 
 
     delete() {
-
         let todos = calendar.getTodos(this.date);
-
-        if (todos === undefined) {
-            throw new Error("No todos for this date");
+        if (!todos) {
+            throw new Error("Could not delete todo: it doesn't seem to exist.");
         }
         let index = todos.indexOf(this);
-
         todos.splice(index, 1);
-
         calendar.renderTodos();
-
     }
 }
 /**
