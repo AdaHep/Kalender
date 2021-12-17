@@ -25,7 +25,15 @@ window.onload = function () {
     setEvents();
 }
 
-
+function numToStr(num, length) {
+    let baseStr = '' + num;
+    let str = '';
+    length = length === undefined ? baseStr.length : length;
+    for (let i = baseStr.length - 1; str.length < length; i--) {
+        str = (baseStr[i] || 0) + str;
+    }
+    return str;
+}
 
 /**
  * Get this[key]. If empty, set to def before returning.

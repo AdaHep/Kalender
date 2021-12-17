@@ -37,7 +37,7 @@ Date.prototype.extract = function () {
         month: this.getMonth(),
         date: this.getDate(),
         day: this.getDay(),
-        hour: this.getHours(),
+        hours: this.getHours(),
         minutes: this.getMinutes()
     };
 }

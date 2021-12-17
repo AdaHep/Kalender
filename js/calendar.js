@@ -2,6 +2,7 @@ class Calendar {
     constructor(calArea) {
         this.calArea = calArea;
         this.data = [];
+        this.movingTodos = new Set();
     }
     /**
      * Render month containing selected date.
@@ -50,15 +51,24 @@ class Calendar {
             })
     }
     renderTodos() {
+        const todolist = document.getElementById('todolist');
+        const movingTodolist = document.getElementById('movingTodolist')
+        let todos = this.getTodos(selectedDate)?.sort(Todo.compare);
+        let movingTodos = Array.from(this.movingTodos).sort(Todo.compare);
+        let i = 0;
 
-        document.getElementById('todolist').innerHTML = '';
-        let todos = this.getTodos(selectedDate);
+        movingTodolist.innerHTML = todolist.innerHTML = '';
+
         if (todos) {
-            let i = 0;
             for (let todo of todos) {
-                todo.render('td' + i++);
+                todo.render('td' + i++, todolist);
             }
         }
+        for (let todo of movingTodos) {
+            todo.render('td' + i++, movingTodolist);
+        }
+
+
     }
     getTodos(date) {
         let { year: year, month: month, date: dateNum } = date.extract();
