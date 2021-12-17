@@ -10,14 +10,18 @@ class Todo {
         this.name = name;
         this.date = new Date(date);
         this.isMoving = false;
+        this.isAllday = false;
     }
     render(id, todolist) {
-        let { year: year, month: month, date: dateNum } = this.date.extract();
+        let { year: year, month: month, date: dateNum, hours: hours, minutes: minutes } = this.date.extract();
+        let dateStr = this.isMoving ? 'Välj datum' : year + ' - ' + (month + 1) + ' - ' + dateNum;
+        let timeStr = hours + ':' + minutes;
+        let classes = 'todo-item flex space-around' + (this.isMoving ? ' moving' : '');
 
         todolist.insertAdjacentHTML('beforeend',
-            '   <div id="' + id + '" class="todo-item flex space-around' + (this.isMoving ? ' moving' : '') + '">' +
+            '   <div id="' + id + '" class="' + classes + '">' +
             '       <div class="todo-info flex justify-center column text-center">' +
-            '           <p class="todo-date">' + year + ' - ' + (month + 1) + ' - ' + dateNum + ' | Hela dagen</p>' +
+            '           <p class="todo-date">' + dateStr + ' | <input type="time" class="time" value="' + timeStr + '"></p>' +
             '           <input type="text" class="name" value="' + this.name + '">' +
             '       </div>' +
             '       <div class="todo-item-icons flex column space-around">' +
@@ -29,16 +33,27 @@ class Todo {
         this.htmlElement = document.getElementById(id);
         this.htmlElement['data-obj'] = this;
 
+        //Event to change name of todo
         this.htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.name = this.value;
-        })
+        });
 
+        //Event to change time of todo
+        this.htmlElement.getElementsByClassName('time')[0].addEventListener('change', function () {
+            let todo = this.closest('.todo-item')['data-obj'];
+            let [hours, minutes] = this.value.split(':');
+            todo.date.setHours(hours);
+            todo.date.setMinutes(minutes);
+        });
+
+        //Event to delete todo
         this.htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.delete();
         });
 
+        //Event to move todo to another date
         this.htmlElement.getElementsByClassName('btn-move')[0].addEventListener('click', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.isMoving = !todo.isMoving;
@@ -51,8 +66,10 @@ class Todo {
                 todo.htmlElement.classList.remove('moving');
                 calendar.movingTodos.delete(todo);
                 todo.date = selectedDate;
+                calendar.addTodo(todo);
+                calendar.renderTodos();
             }
-        })
+        });
     }
 
     /**
@@ -81,9 +98,12 @@ class Todo {
  * Compares two Todo objects by time.
  * @param {Todo} todo0 
  * @param {Todo} todo1 
- * @returns {Number} Difference between times.
+ * @returns {Number} Difference between times unless exactly one is all day, in which case that one will be considered less.
  */
 Todo.compare = function (todo0, todo1) {
-    return todo0.date.getTime() - todo1.date.getTime();
+    if (todo0.isAllday === todo1.isAllday) {
+        return todo0.date.getTime() - todo1.date.getTime();
+    }
+    return todo0.isAllday ? -1 : 1;
 }
 
