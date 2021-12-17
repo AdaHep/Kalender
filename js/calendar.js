@@ -14,7 +14,7 @@ class Calendar {
         let firstDay = (selectedDate.getDayOfDate(1) + 6) % 7; //Extra math in order to convert Sun-Mon into Mon-Sun
 
         this.calArea.innerHTML = '';
-        document.getElementById('month-title').innerHTML = selectedDate.getMonthName() + ' ' + selectedDate.getFullYear();
+        document.getElementById('month-title').innerHTML = selectedDate.getMonthName() + ' ' + year;
 
         for (let i = 0; i < firstDay; i++) {
             this.calArea.insertAdjacentHTML('beforeend', '<div class="empty-card"></div>');

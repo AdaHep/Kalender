@@ -66,3 +66,9 @@ Date.prototype.incrementMonth = function (i) {
 Date.prototype.getMonthName = function () {
     return monthNames[this.getMonth()];
 }
+
+Date.prototype.steal = function (from, attribs) {
+    for (let att of attribs) {
+        this['set' + att](from['get' + att]());
+    }
+}

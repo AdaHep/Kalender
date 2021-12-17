@@ -65,7 +65,7 @@ class Todo {
             else {
                 todo.htmlElement.classList.remove('moving');
                 calendar.movingTodos.delete(todo);
-                todo.date = selectedDate;
+                todo.date.steal(selectedDate, ['FullYear', 'Month', 'Date']);
                 calendar.addTodo(todo);
                 calendar.renderTodos();
             }
