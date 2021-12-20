@@ -75,7 +75,7 @@
     position: absolute;
     display: unset;
   }
-  .close-btn {
+  #hide {
     display: flex;
     justify-content: center;
     font-size: 4rem;
