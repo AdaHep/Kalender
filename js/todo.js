@@ -26,7 +26,7 @@ class Todo {
             '       </div>' +
             '       <div class="todo-item-icons flex column space-around">' +
             '           <i class="far fa-trash-alt btn-delete"></i>' +
-            '           <i class="fab fa-buromobelexperte btn-move" title="Flytta till annat datum"></i>' +
+            '           <img class="btn-move" src="./icons/edit-date.svg" alt="ändra datum" title="Flytta till annat datum">' +
             '       </div>' +
             '   </div>'
         );
