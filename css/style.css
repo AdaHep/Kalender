@@ -5,8 +5,7 @@
 }
 .calendar-container{
     flex-grow: 1;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem 1rem 1rem;
 }
 
 #hide {
@@ -20,7 +19,6 @@
     display: grid;
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(6,1fr);
-    /* height: 100vh; */
     min-height: 50rem;
     gap: 1.5px;
 }

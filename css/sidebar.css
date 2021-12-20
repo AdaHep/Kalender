@@ -9,7 +9,6 @@
 .day-info {
   font-size: 2rem;
   width: 100%;
-  /* color: white; */
 }
 
 #day {
@@ -26,12 +25,9 @@
 
 .sidebar-todo {
   margin-top: 2rem;
-  padding-bottom: 1rem;
   width: 95%;
   background-color: rgb(176, 226, 233);
-  border-radius: .5rem;
-  /* border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem; */
+  border-radius: 0.5rem;
 }
 
 .sidebar-todo-headline {
@@ -47,18 +43,22 @@
 .todo-item {
   width: 90%;
   background-color: rgb(253, 249, 249);
-  padding: .7rem .7rem .7rem .7rem;
-  border-radius: .2rem;
+  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 .todo-date {
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
+}
+
+.todo-item-icons {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
 }
 
 .todo-item-icons > i {
-  margin-left: .3rem;
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
 }
 
 .todo-info > h5 {
@@ -67,6 +67,10 @@
   margin-right: 0.3rem;
 }
 
-.moving{
-  background-color: blueviolet;
+.btn-move {
+  width: 22px;
+}
+
+.moving {
+  background-color: rgb(155, 153, 153);
 }

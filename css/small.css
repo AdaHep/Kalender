@@ -68,6 +68,10 @@
     font-size: 1rem;
   }
 
+  .holiday > .day-card-bottom {
+    margin-left: .6rem;
+  }
+
   #calendar-btn {
     cursor: pointer;
   }
