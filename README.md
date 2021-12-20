@@ -10,5 +10,7 @@ För att flytta en todo till ett nytt datum så gör du på följande sätt:
 Limits: 
 Lilla kalendern inte responsiv under 630px. Därav försvinner möjligheten att öppna kalendern i mindre fönster. 
 
+DEMO: [https://adahep.github.io/Kalender/]
+
 
 
