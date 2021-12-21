@@ -23,7 +23,7 @@ class Calendar {
             //Clone selectedDate for iteration
             let itDate = new Date(selectedDate);
             itDate.setDate(i);
-            let card = new DayCard(itDate, 'day' + i);
+            let card = new DayCard(itDate, 'day' + i, this.getTodos(itDate)?.length);
             dayCards.push(card);
             if (i === selectedDay) {
                 card.select();
@@ -67,7 +67,6 @@ class Calendar {
         for (let todo of movingTodos) {
             todo.render('td' + i++, movingTodolist);
         }
-
 
     }
     getTodos(date) {
