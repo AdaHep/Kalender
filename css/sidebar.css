@@ -4,7 +4,7 @@
   margin-left: 1rem;
   margin-bottom: 1rem;
   min-width: 17rem;
-  background-color: rgb(185, 185, 185);
+  background-color: rgb(210, 238, 255);
   border-radius: 2rem;
 }
 
@@ -28,7 +28,7 @@
 .sidebar-todo {
   margin-top: 2rem;
   width: 95%;
-  background-color: rgb(176, 226, 233);
+  background-color: rgb(194, 187, 255);
   border-radius: 0.5rem;
 }
 
