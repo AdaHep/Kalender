@@ -16,6 +16,17 @@ const monthNames = [
     'December'
 ];
 
+let verbs = ['tvätta'], nouns = ['katt'];
+fetch('verbs.txt')
+    .then(response => response.text())
+    .then((data) => {
+        verbs = data.split('\n');
+    });
+fetch('nouns.txt')
+    .then(response => response.text())
+    .then((data) => {
+        nouns = data.split('\n');
+    });
 
 window.onload = function () {
     // Create and render calendar
@@ -55,4 +66,9 @@ Object.prototype.magicGet = function (key, addDef = false, def = new this.constr
         if (addDef) this[key] = def;
     }
     return val;
+}
+
+
+Array.prototype.getRandom = function () {
+    return this[Math.floor(Math.random() * this.length)];
 }
