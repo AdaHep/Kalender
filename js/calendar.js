@@ -1,7 +1,8 @@
 class Calendar {
     constructor(calArea) {
         this.calArea = calArea;
-        this.data = [];
+        // this.data = [];
+        this.data = JSON.parse(localStorage.getItem('data')) || []
         this.movingTodos = new Set();
     }
     /**
@@ -67,7 +68,7 @@ class Calendar {
         for (let todo of movingTodos) {
             todo.render('td' + i++, movingTodolist);
         }
-
+        this.saveToLS();
     }
     getTodos(date) {
         let { year: year, month: month, date: dateNum } = date.extract();
@@ -78,4 +79,13 @@ class Calendar {
         let todos = this.data.magicGet(year, true).magicGet(month, true).magicGet(dateNum, true);
         todos.push(todo);
     }
+    
+    /**
+     * Saves data to local storage
+     */
+    saveToLS() {
+        let dataStr = JSON.stringify(this.data)
+        localStorage.setItem('data', dataStr)
+    }
+    
 }
