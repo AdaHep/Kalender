@@ -1,12 +1,13 @@
 /**
  * Class representing a todo
  */
-class Todo {
+class Todo extends Object {
     /**
      * Add new todo to date.
      * @param {Date} date - Date and time of todo.
      */
     constructor(name = 'Namnlös todo', date = selectedDate) {
+        super();
         this.name = name;
         this.date = new Date(date);
         this.isMoving = false;
@@ -37,6 +38,7 @@ class Todo {
         htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.name = this.value;
+            calendar.saveToLS();
         });
 
         //Event to change time of todo
@@ -45,6 +47,7 @@ class Todo {
             let [hours, minutes] = this.value.split(':');
             todo.date.setHours(hours);
             todo.date.setMinutes(minutes);
+            calendar.saveToLS();
         });
 
         //Event to delete todo

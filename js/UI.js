@@ -14,7 +14,7 @@ function setEvents() {
 
     btnAddTodo.addEventListener('click', function () {
         let todo = new Todo();
-        calendar.addTodo(todo);
+        calendar.addTodo(todo, selectedDate);
         calendar.render(selectedDate);
     });
 }
