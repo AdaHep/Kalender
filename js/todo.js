@@ -30,17 +30,17 @@ class Todo {
             '       </div>' +
             '   </div>'
         );
-        this.htmlElement = document.getElementById(id);
-        this.htmlElement['data-obj'] = this;
+        let htmlElement = document.getElementById(id);
+        htmlElement['data-obj'] = this;
 
         //Event to change name of todo
-        this.htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
+        htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.name = this.value;
         });
 
         //Event to change time of todo
-        this.htmlElement.getElementsByClassName('time')[0].addEventListener('change', function () {
+        htmlElement.getElementsByClassName('time')[0].addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             let [hours, minutes] = this.value.split(':');
             todo.date.setHours(hours);
@@ -48,22 +48,23 @@ class Todo {
         });
 
         //Event to delete todo
-        this.htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
+        htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.delete();
         });
 
         //Event to move todo to another date
-        this.htmlElement.getElementsByClassName('btn-move')[0].addEventListener('click', function () {
-            let todo = this.closest('.todo-item')['data-obj'];
+        htmlElement.getElementsByClassName('btn-move')[0].addEventListener('click', function () {
+            let todoEl = this.closest('.todo-item');
+            let todo = todoEl['data-obj'];
             todo.isMoving = !todo.isMoving;
             if (todo.isMoving) {
-                todo.htmlElement.classList.add('moving');
+                todoEl.classList.add('moving');
                 calendar.movingTodos.add(todo);
                 todo.delete();
             }
             else {
-                todo.htmlElement.classList.remove('moving');
+                todoEl.classList.remove('moving');
                 calendar.movingTodos.delete(todo);
                 todo.date.steal(selectedDate, ['FullYear', 'Month', 'Date']);
                 calendar.addTodo(todo);
