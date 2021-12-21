@@ -10,6 +10,11 @@
   .sidebar {
     position: absolute;
     width: 95%;
+    min-height: 10rem;
+  }
+
+  .sidebar-todo {
+    margin-bottom: 1rem;
   }
 
   .date-clock {
@@ -31,7 +36,8 @@
     padding: 0.2rem;
   }
   
-  .calendar-btn {
+  #calendar-btn {
+    display: unset;
     cursor: pointer;
   }
   .calendar {

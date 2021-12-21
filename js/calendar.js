@@ -2,6 +2,7 @@ class Calendar {
     constructor(calArea) {
         this.calArea = calArea;
         this.data = [];
+        this.loadFromLS();
         this.movingTodos = new Set();
     }
     /**
@@ -23,7 +24,7 @@ class Calendar {
             //Clone selectedDate for iteration
             let itDate = new Date(selectedDate);
             itDate.setDate(i);
-            let card = new DayCard(itDate, 'day' + i);
+            let card = new DayCard(itDate, 'day' + i, this.getTodos(itDate)?.length);
             dayCards.push(card);
             if (i === selectedDay) {
                 card.select();
@@ -67,8 +68,7 @@ class Calendar {
         for (let todo of movingTodos) {
             todo.render('td' + i++, movingTodolist);
         }
-
-
+        this.saveToLS();
     }
     getTodos(date) {
         let { year: year, month: month, date: dateNum } = date.extract();
@@ -78,5 +78,42 @@ class Calendar {
         let { year: year, month: month, date: dateNum } = todo.date.extract();
         let todos = this.data.magicGet(year, true).magicGet(month, true).magicGet(dateNum, true);
         todos.push(todo);
+    }
+
+    /**
+     * Saves data to local storage
+     */
+    saveToLS() {
+        let arr = [];
+        this.forEachTodo(function (todo) {
+            arr.push(todo);
+        });
+        let dataStr = JSON.stringify(arr);
+        localStorage.setItem('data', dataStr)
+    }
+
+
+    loadFromLS() {
+        let todos = JSON.parse(localStorage.getItem('data'));
+        if(todos)for (let todo of todos) {
+            //Convert from Object to Todo
+            todo.__proto__ = Todo.prototype;
+            //Turn stupid date string into actual Date object
+            todo.date = new Date(todo.date);
+            this.addTodo(todo);
+        }
+
+    }
+
+    forEachTodo(f) {
+        for (let year of this.data) {
+            if (year) for (let month of year) {
+                if (month) for (let day of month) {
+                    if (day) for (let todo of day) {
+                        f(todo);
+                    }
+                }
+            }
+        }
     }
 }

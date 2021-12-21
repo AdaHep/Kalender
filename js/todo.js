@@ -1,12 +1,13 @@
 /**
  * Class representing a todo
  */
-class Todo {
+class Todo extends Object {
     /**
      * Add new todo to date.
      * @param {Date} date - Date and time of todo.
      */
     constructor(name = 'Namnlös todo', date = selectedDate) {
+        super();
         this.name = name;
         this.date = new Date(date);
         this.isMoving = false;
@@ -14,7 +15,7 @@ class Todo {
     }
     render(id, todolist) {
         let { year: year, month: month, date: dateNum, hours: hours, minutes: minutes } = this.date.extract();
-        let dateStr = this.isMoving ? 'Välj datum' : year + ' - ' + (month + 1) + ' - ' + dateNum;
+        let dateStr = this.isMoving ? 'Välj datum' : year + ' - ' + numToStr(month + 1, 2) + ' - ' + numToStr(dateNum, 2) ;
         let timeStr = numToStr(hours, 2) + ':' + numToStr(minutes, 2);
         let classes = 'todo-item flex space-around' + (this.isMoving ? ' moving' : '');
 
@@ -30,44 +31,47 @@ class Todo {
             '       </div>' +
             '   </div>'
         );
-        this.htmlElement = document.getElementById(id);
-        this.htmlElement['data-obj'] = this;
+        let htmlElement = document.getElementById(id);
+        htmlElement['data-obj'] = this;
 
         //Event to change name of todo
-        this.htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
+        htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.name = this.value;
+            calendar.saveToLS();
         });
 
         //Event to change time of todo
-        this.htmlElement.getElementsByClassName('time')[0].addEventListener('change', function () {
+        htmlElement.getElementsByClassName('time')[0].addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             let [hours, minutes] = this.value.split(':');
             todo.date.setHours(hours);
             todo.date.setMinutes(minutes);
+            calendar.saveToLS();
         });
 
         //Event to delete todo
-        this.htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
+        htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.delete();
         });
 
         //Event to move todo to another date
-        this.htmlElement.getElementsByClassName('btn-move')[0].addEventListener('click', function () {
-            let todo = this.closest('.todo-item')['data-obj'];
+        htmlElement.getElementsByClassName('btn-move')[0].addEventListener('click', function () {
+            let todoEl = this.closest('.todo-item');
+            let todo = todoEl['data-obj'];
             todo.isMoving = !todo.isMoving;
             if (todo.isMoving) {
-                todo.htmlElement.classList.add('moving');
+                todoEl.classList.add('moving');
                 calendar.movingTodos.add(todo);
                 todo.delete();
             }
             else {
-                todo.htmlElement.classList.remove('moving');
+                todoEl.classList.remove('moving');
                 calendar.movingTodos.delete(todo);
                 todo.date.steal(selectedDate, ['FullYear', 'Month', 'Date']);
                 calendar.addTodo(todo);
-                calendar.renderTodos();
+                calendar.render(selectedDate);
             }
         });
     }
@@ -91,7 +95,7 @@ class Todo {
         }
         let index = todos.indexOf(this);
         todos.splice(index, 1);
-        calendar.renderTodos();
+        calendar.render(selectedDate);
     }
 }
 /**
