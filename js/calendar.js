@@ -95,7 +95,7 @@ class Calendar {
 
     loadFromLS() {
         let todos = JSON.parse(localStorage.getItem('data'));
-        for (let todo of todos) {
+        if(todos)for (let todo of todos) {
             //Convert from Object to Todo
             todo.__proto__ = Todo.prototype;
             //Turn stupid date string into actual Date object
