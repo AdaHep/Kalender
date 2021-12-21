@@ -7,9 +7,9 @@ class Todo extends Object {
      * @param {string} name - Name of todo.
      * @param {Date} date - Date and time of todo.
      */
-    constructor(name = 'Namnlös todo', date = selectedDate) {
+    constructor(name, date = selectedDate) {
         super();
-        this.name = name;
+        this.name = name || verbs.getRandom() + ' ' + nouns.getRandom();
         this.date = new Date(date);
         this.isMoving = false;
         this.isAllday = false;
@@ -21,7 +21,7 @@ class Todo extends Object {
      */
     render(id, todolist) {
         let { year: year, month: month, date: dateNum, hours: hours, minutes: minutes } = this.date.extract();
-        let dateStr = this.isMoving ? 'Välj datum' : year + ' - ' + numToStr(month + 1, 2) + ' - ' + numToStr(dateNum, 2) ;
+        let dateStr = this.isMoving ? 'Välj datum' : year + ' - ' + numToStr(month + 1, 2) + ' - ' + numToStr(dateNum, 2);
         let timeStr = numToStr(hours, 2) + ':' + numToStr(minutes, 2);
         let classes = 'todo-item flex space-around' + (this.isMoving ? ' moving' : '');
 
