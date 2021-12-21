@@ -67,7 +67,7 @@ class Todo {
                 calendar.movingTodos.delete(todo);
                 todo.date.steal(selectedDate, ['FullYear', 'Month', 'Date']);
                 calendar.addTodo(todo);
-                calendar.renderTodos();
+                calendar.render(selectedDate);
             }
         });
     }
@@ -91,7 +91,7 @@ class Todo {
         }
         let index = todos.indexOf(this);
         todos.splice(index, 1);
-        calendar.renderTodos();
+        calendar.render(selectedDate);
     }
 }
 /**
