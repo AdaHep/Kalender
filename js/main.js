@@ -18,13 +18,19 @@ const monthNames = [
 
 
 window.onload = function () {
-    // GENERATE CALENDAR
+    // Create and render calendar
     let calArea = document.getElementById('calArea');
     calendar = new Calendar(calArea);
     calendar.render(selectedDate);
     setEvents();
 }
 
+/**
+ * Convert num to string of length characters by adding zeros or cutting.
+ * @param {number|string} num 
+ * @param {number} [length]
+ * @returns {string}
+ */
 function numToStr(num, length) {
     let baseStr = '' + num;
     let str = '';

@@ -3,7 +3,8 @@
  */
 class Todo extends Object {
     /**
-     * Add new todo to date.
+     * Create new todo.
+     * @param {string} name - Name of todo.
      * @param {Date} date - Date and time of todo.
      */
     constructor(name = 'Namnlös todo', date = selectedDate) {
@@ -13,6 +14,11 @@ class Todo extends Object {
         this.isMoving = false;
         this.isAllday = false;
     }
+    /**
+     * Render this todo to sidebar.
+     * @param {string} id 
+     * @param {HTMLElement} todolist 
+     */
     render(id, todolist) {
         let { year: year, month: month, date: dateNum, hours: hours, minutes: minutes } = this.date.extract();
         let dateStr = this.isMoving ? 'Välj datum' : year + ' - ' + numToStr(month + 1, 2) + ' - ' + numToStr(dateNum, 2) ;
@@ -31,7 +37,9 @@ class Todo extends Object {
             '       </div>' +
             '   </div>'
         );
+
         let htmlElement = document.getElementById(id);
+        //Make sure the html element knows which Todo object it refers to
         htmlElement['data-obj'] = this;
 
         //Event to change name of todo
@@ -83,11 +91,7 @@ class Todo extends Object {
     setDate(date) {
 
     }
-    /**
-     * Delete todo from calendar, clean up and refresh calender view.
-     */
-
-
+    /** Delete todo from calendar, clean up and refresh calender view. */
     delete() {
         let todos = calendar.getTodos(this.date);
         if (!todos) {
@@ -99,7 +103,7 @@ class Todo extends Object {
     }
 }
 /**
- * Compares two Todo objects by time.
+ * Compare two Todo objects by time.
  * @param {Todo} todo0 
  * @param {Todo} todo1 
  * @returns {Number} Difference between times unless exactly one is all day, in which case that one will be considered less.

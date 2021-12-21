@@ -1,13 +1,15 @@
 class Calendar {
+    /**
+     * Create new calendar.
+     * @param {HTMLElement} calArea 
+     */
     constructor(calArea) {
         this.calArea = calArea;
         this.data = [];
         this.loadFromLS();
         this.movingTodos = new Set();
     }
-    /**
-     * Render month containing selected date.
-     */
+    /** Render month containing selected date. */
     render(selectedDate) {
         let dayCards = [];
         let { year: year, month: month, date: selectedDay } = selectedDate.extract();
@@ -51,6 +53,7 @@ class Calendar {
                 }
             })
     }
+    /** Render todos for selectedDate in sidebar. */
     renderTodos() {
         const todolist = document.getElementById('todolist');
         const movingTodolist = document.getElementById('movingTodolist')
@@ -70,19 +73,26 @@ class Calendar {
         }
         this.saveToLS();
     }
+    /**
+     * Get all todos for date.
+     * @param {Date} date 
+     * @returns {Todo[]|undefined}
+     */
     getTodos(date) {
         let { year: year, month: month, date: dateNum } = date.extract();
         return this.data.magicGet(year).magicGet(month)[dateNum]; //Last one is ordinary [] in order to prevent incorrect usage such as trying to add stuff to the actual data this way. That is, getTodos is guaranteed to return undefined if there's no array for date.
     }
+    /**
+     * Add todo to this.data according to its date.
+     * @param {Todo} todo 
+     */
     addTodo(todo) {
         let { year: year, month: month, date: dateNum } = todo.date.extract();
         let todos = this.data.magicGet(year, true).magicGet(month, true).magicGet(dateNum, true);
         todos.push(todo);
     }
 
-    /**
-     * Saves data to local storage
-     */
+    /** Save todos to local storage. */
     saveToLS() {
         let arr = [];
         this.forEachTodo(function (todo) {
@@ -92,10 +102,10 @@ class Calendar {
         localStorage.setItem('data', dataStr)
     }
 
-
+    /** Read todos from local storage and add them. */
     loadFromLS() {
         let todos = JSON.parse(localStorage.getItem('data'));
-        if(todos)for (let todo of todos) {
+        if (todos) for (let todo of todos) {
             //Convert from Object to Todo
             todo.__proto__ = Todo.prototype;
             //Turn stupid date string into actual Date object
@@ -104,7 +114,10 @@ class Calendar {
         }
 
     }
-
+    /**
+     * Call f(todo) for each Todo object todo.
+     * @param {function} f 
+     */
     forEachTodo(f) {
         for (let year of this.data) {
             if (year) for (let month of year) {
