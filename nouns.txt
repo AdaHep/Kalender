@@ -21,7 +21,6 @@ abdomina
 abduktion
 abelprovare
 aberration
-abessinska
 abietinsyra
 abilitet
 abiturient
@@ -38,14 +37,12 @@ abonnentgrupprelä
 aborigin
 Abrahamsberg
 abrainsyra
-abrakadabra
 abrasion
 abrovink
 abrovinsch
 absid
 absidkyrka
 absint
-abskissa
 abskissaxel
 absoluteringskolonn
 absolutfrekvensdeviation
@@ -107,7 +104,6 @@ acetylering
 acetyleringsmassa
 acetylsalicylsyra
 aciditet
-ackja
 ackjefärd
 acklamation
 acklimatisering
@@ -258,7 +254,6 @@ affärsvänner
 afghan
 afghanhund
 Afghanistan
-afghanska
 aficionado
 aforism
 aforistiker
@@ -269,7 +264,6 @@ afrikanamerikan
 afrikand
 afrikanisering
 afrikanist
-afrikanska
 afro
 afroamerikan
 afrodisiakum
@@ -474,10 +468,6 @@ algoritm
 alibi
 alienation
 alienering
-alika
-alingsåsare
-alingsåsbo
-alka
 alkali
 alkalimetall
 alkalisering
@@ -532,7 +522,6 @@ allmänbildning
 allmängiltighet
 allmänhet
 allmänläkare
-allmänna
 allmänning
 allmännytta
 allofon
@@ -552,7 +541,6 @@ alludering
 allusion
 alluvialbildning
 alluvialjord
-alluviallera
 alluvialperiod
 alluvialsand
 allvar
@@ -660,11 +648,8 @@ ambrosia
 Amelia
 americium
 Amerika
-amerikan
-amerikanare
 amerikanisering
 amerikanism
-amerikanska
 ametist
 amfetamin
 amfetamisulfat
@@ -679,7 +664,6 @@ amiral
 amiralitet
 amiralitetskollegium
 amiralskap
-amma
 ammoniak
 ammoniaktvättare
 ammonium
@@ -712,7 +696,6 @@ amtman
 amtmän
 amulett
 amöba
-ana
 anabolism
 anafor
 anagram
@@ -738,7 +721,6 @@ anarkist
 anarkosyndikalism
 anatema
 anatemana
-anatom
 anatomi
 anbefallning
 anblick
@@ -768,8 +750,6 @@ andlöshet
 andning
 andnöd
 Andorra
-andorran
-andorranska
 andrabil
 andraderivata
 andradivision
@@ -804,7 +784,6 @@ androgyn
 Android
 andrum
 andsträck
-andtäppa
 andunge
 anekdot
 anemi
@@ -821,7 +800,6 @@ anfordran
 anfäder
 anfäktelse
 anfäktning
-anföra
 anförare
 anförarskap
 anföring
@@ -832,7 +810,6 @@ angeldon
 angelfiske
 angelägenhet
 angiografi
-angiva
 angivande
 angivare
 angivelse
@@ -858,10 +835,8 @@ anhalt
 anhang
 anhopning
 anhydrid
-anhålla
 anhållning
 anhängare
-anhängiggöra
 anilin
 animalier
 animation
@@ -908,7 +883,6 @@ anletsdrag
 anliggning
 anliggningsyta
 anlopp
-anlägga
 anläggare
 anläggning
 anlöpning
@@ -916,9 +890,7 @@ anlöpningshamn
 anmaning
 anmaningsrop
 anmarsch
-anmoda
 anmoder
-anmäla
 anmälare
 anmälning
 anmärkning
@@ -963,7 +935,6 @@ anrikning
 anrop
 anropssignal
 anrättning
-ansa
 ansamling
 anseende
 ansikte
@@ -985,7 +956,6 @@ anspråk
 anspänning
 anspänningstid
 anstalt
-anstifta
 anstiftare
 anstormning
 anstrukit
@@ -1007,10 +977,8 @@ ansvarighetslag
 ansvällning
 ansättning
 ansättningsskruv
-ansöka
 ansökare
 ansökning
-antaga
 antagande
 antagning
 antagonism
@@ -1170,7 +1138,6 @@ aptitlighet
 aptitlöshet
 aptitretare
 apunge
-ara
 arab
 arabesk
 arabist
@@ -1221,8 +1188,6 @@ arena
 areometer
 argbigga
 Argentina
-argentinare
-argentinska
 argon
 argonatom
 argonaut
@@ -1274,7 +1239,6 @@ armbindel
 armborst
 armbrott
 armbrytning
-armbåga
 armbågsled
 armbågsveck
 armé
@@ -1473,7 +1437,6 @@ asylansökan
 asylrätt
 asymmetri
 asymptot
-asynja
 asätare
 atavism
 ataxi
@@ -1587,7 +1550,6 @@ aval
 avancemang
 avancemangsmöjlighet
 avancering
-avanmäla
 avanmälning
 avannonsering
 avantgarde
@@ -1624,9 +1586,6 @@ avbärarlist
 avbärning
 avböjning
 avbön
-avdagata
-avdagataga
-avdagatog
 avdamning
 avdelning
 avdemokratisering
@@ -1664,7 +1623,6 @@ avfyrning
 avfälling
 avfärd
 avfärgning
-avföda
 avföring
 avgasrör
 avgassystem
@@ -1695,7 +1653,6 @@ avhumanisering
 avhysning
 avhyvling
 avhållsamhet
-avhälla
 avhämtning
 avhängighet
 avhärdning
@@ -1707,7 +1664,6 @@ aviatik
 aviatör
 aviavgift
 avidentifiering
-aviga
 avighet
 avigsida
 avisering
@@ -1717,7 +1673,6 @@ avkalkning
 avkalkningsmedel
 avkastning
 avklappning
-avklippa
 avklippning
 avklädning
 avklädningsrum
@@ -1736,7 +1691,6 @@ avkylning
 avkännare
 avkänning
 avkörning
-avla
 avlade
 avlagring
 avlagt
@@ -1753,7 +1707,6 @@ avlossning
 avlusare
 avlusning
 avlutning
-avlysa
 avlysning
 avlyssning
 avläggare
@@ -1764,7 +1717,6 @@ avlämning
 avläsare
 avläsning
 avlöning
-avlöpa
 avlöpning
 avlösare
 avlösning
@@ -1780,7 +1732,6 @@ avmätning
 avmönstring
 avnavling
 avnämare
-avnöta
 avnötningsapparat
 avocadosallad
 avoghet
@@ -1811,12 +1762,10 @@ avropsavtal
 avrostning
 avrundning
 avrustning
-avråda
 avräkning
 avräkningsnota
 avrättning
 avrättningsmetod
-avsa
 avsadling
 avsagt
 avsaknad
@@ -1847,7 +1796,6 @@ avskogning
 avskrap
 avskrift
 avskrivning
-avskräcka
 avskräckning
 avskräckningslag
 avskräde
@@ -1900,7 +1848,6 @@ avstigning
 avstjälpning
 avstressning
 avstyckning
-avstyrka
 avstyrning
 avstående
 avstånd
@@ -1957,7 +1904,6 @@ avverkning
 avvikare
 avvikelse
 avvikning
-avvinna
 avvisare
 avvisning
 avvägning
@@ -2083,7 +2029,6 @@ axiom
 axiometer
 axiomsystem
 axishjort
-axla
 axolotl
 axon
 axplock
@@ -2096,7 +2041,6 @@ azalea
 azer
 azerbajdzjan
 Azerbajdzjan
-azerbajdzjanska
 azid
 azidjon
 azimut
@@ -2218,7 +2162,6 @@ bajonettanfall
 bajrare
 bajskorv
 bak
-baka
 bakaxel
 bakaxelväxel
 bakband
@@ -2278,7 +2221,6 @@ bakverk
 bakväg
 bakåtpassning
 bakåtsträvare
-bala
 balalajka
 balansering
 balanseringsfel
@@ -2371,7 +2313,6 @@ banjo
 bank
 banka
 Bankeryd
-Bankerydsbo
 bankett
 bankettsal
 bankfack
@@ -2651,11 +2592,8 @@ begonia
 begravning
 begrepp
 begriplighet
-begrov
-begrunda
 begränsning
 begynnelse
-begå
 begåvning
 begärelse
 behag
@@ -2673,12 +2611,9 @@ behärskare
 behärskning
 behörighet
 Beirut
-beivra
-bekant
 bekantgjort
 bekanting
 bekantskap
-bekläda
 beklädnad
 beklädnadsarbetare
 beklädnadsindustri
@@ -2960,12 +2895,9 @@ betydenhet
 betyg
 betygelse
 betygsättning
-betäcka
 betäckning
-betänka
 betänketid
 betänklighet
-beundra
 beundrare
 beundrarinna
 bevakare
@@ -2986,7 +2918,6 @@ beväring
 Bhutan
 bi
 biavsikt
-bibba
 bibel
 bibelcitat
 bibetydelse
@@ -3041,11 +2972,9 @@ biktfäder
 biktstol
 bikupa
 bil
-bila
 bilade
 bilaffär
 bilaga
-bilagt
 bilavgift
 bilbana
 bilbarnstol
@@ -3125,12 +3054,9 @@ biltur
 bilvård
 bilvårdsprodukt
 bilväg
-bilägga
-bimbo
 bimetall
 bimåne
 binamn
-binda
 bindare
 bindbjälke
 bindel
@@ -3215,7 +3141,6 @@ bisvärm
 bisyssla
 bisättning
 bit
-bita
 bitande
 bitestikel
 bitsocker
@@ -3412,7 +3337,6 @@ blodådror
 blodöverfyllnad
 blodöverföring
 blogg
-blogga
 bloggare
 bloggning
 bloggnyhet
@@ -3446,13 +3370,11 @@ blomstring
 blomväxt
 blondin
 blot
-blotta
 blottare
 blottlade
 blottlagt
 bludder
 bluff
-bluffa
 bluffaktura
 bluffare
 bluffmakare
@@ -3468,7 +3390,6 @@ blybatteri
 blyblomma
 blyertspenna
 blyförgiftning
-blyga
 blygd
 blygdben
 blygdläpp
@@ -3565,7 +3486,6 @@ bocktörne
 bod
 bodelning
 Boden
-bodenbo
 bodybuilding
 Boeing
 boende
@@ -3792,17 +3712,13 @@ bortskämdhet
 bortskänka
 bortstötning
 borttagning
-borttog
 bortträngning
-boråsare
-boråsbo
 boränta
 borätt
 boskap
 boskillnad
 bosniak
 Bosnien
-bosnienkroat
 bosnienserb
 bossanova
 bossvälde
@@ -4213,7 +4129,6 @@ buffertzon
 buffring
 bugande
 bugg
-bugga
 bugglåt
 buggning
 bugning
@@ -5627,9 +5542,7 @@ dra
 drabant
 drabantstat
 drabbning
-drack
 drag
-draga
 dragare
 dragdjur
 dragé
@@ -6055,7 +5968,6 @@ efterbesiktning
 efterbesiktningsavgift
 efterbrännkammare
 efterforskning
-efterfråga
 efterfrågeökning
 efterfrågning
 efterföljare
@@ -6115,7 +6027,6 @@ egenskap
 egentid
 egenvärde
 egg
-egga
 eggelse
 egid
 egnahem
@@ -7672,7 +7583,6 @@ flad
 fladder
 fladdermusfåtölj
 fladdrighet
-flaga
 flagell
 flagellant
 flagellat
@@ -7778,7 +7688,6 @@ flika
 flikighet
 flimmer
 flimmerhår
-flina
 flinga
 flingpaket
 flingsalt
@@ -8036,7 +7945,6 @@ foderärter
 fodral
 fodring
 fog
-foga
 fogbruk
 fogde
 foglighet
@@ -8719,7 +8627,6 @@ fröämne
 ftalat
 ftalsyra
 fuchsia
-fuga
 Fujitsu
 fukt
 fuktighet
@@ -9247,7 +9154,6 @@ förgängelse
 förgänglighet
 förgätenhet
 förgätmigej
-förgöra
 förhall
 förhalning
 förhandlare
@@ -9321,7 +9227,6 @@ förkärlek
 förköpsrätt
 förkörsrätt
 förladdning
-förlade
 förlag
 förlaga
 förlagt
@@ -9333,7 +9238,6 @@ förlikningsavgift
 förlikningsbud
 förlikningssumma
 förlisning
-förlita
 förljudande
 förljugenhet
 förlopp
@@ -9361,7 +9265,6 @@ förlöpare
 förlöpning
 förlösning
 förmak
-förmala
 förman
 förmaning
 förmaningstal
@@ -9371,17 +9274,11 @@ förmatch
 förmedla
 förmedlare
 förmedling
-förmena
 förmiddag
 förmiddagssol
 förminskning
 förmoda
 förmultning
-ndare
-ndarskap
-nderi
-nderskap
-förmå
 förmåga
 förmånlighet
 förmälning
@@ -9626,10 +9523,8 @@ förtimring
 förtjockning
 förtjockningstrumma
 förtjusning
-förtjäna
 förtjänst
 förtjänsttecken
-förtog
 förtolkning
 förtoning
 förtopp
@@ -9724,7 +9619,6 @@ föräldramöte
 föräldrasamtal
 föräldraskap
 förälskelse
-förända
 föränderlighet
 förändring
 förödelse
@@ -9996,8 +9890,6 @@ gemenskap
 gemination
 geminering
 gemsrot
-t
-tlighet
 gemål
 genbank
 gendarm
@@ -10238,7 +10130,6 @@ gitarrist
 gitarrspel
 gitarrstämmare
 gitter
-giv
 givare
 givarsignal
 givmildhet
@@ -10335,7 +10226,6 @@ glipa
 gliring
 glissando
 glitter
-glo
 glob
 globalisering
 globaliseringsråd
@@ -10491,10 +10381,7 @@ gossopran
 gossröst
 gotik
 Gotland
-gotländska
 gotlänning
-gottgjort
-gottgöra
 gottgörelse
 gottisaffär
 gottispåse
@@ -11103,7 +10990,6 @@ göl
 gömma
 gömsle
 gömställe
-gör
 görande
 gördel
 gördeldäck
@@ -16578,7 +16464,6 @@ kungsfisk
 kungshög
 kungsörn
 Kungälv
-kungöra
 kungörelse
 kunnande
 kunnighet
@@ -18026,11 +17911,9 @@ lort
 Losberg
 loska
 lossning
-lotsa
 lotsavgift
 lotsning
 lott
-lotta
 lottakår
 lottdragning
 lotteri
@@ -18040,13 +17923,10 @@ lotto
 lottsedel
 lotusblomma
 lov
-lova
 lovningar
 lovord
 lovsång
 lovtal
-lua
-lubrikator
 lucia
 luciafest
 luciafirande
@@ -18058,7 +17938,6 @@ luciasång
 luciatåg
 lucka
 ludd
-luder
 Ludvika
 luffare
 luffning
@@ -18094,7 +17973,6 @@ luftvägsbesvär
 luftvärn
 luftvärnsskydd
 lugg
-lugga
 lugn
 lukt
 luktbekämpning
@@ -22156,8 +22034,6 @@ omväxling
 ndigförklaring
 omändring
 omänsklighet
-omöjliggjort
-omöjliggöra
 omöjlighet
 onaturlighet
 ondska
@@ -22377,8 +22253,6 @@ osed
 osedlighet
 osjälviskhet
 osjälvständighet
-oskadliggjort
-oskadliggöra
 oskadlighet
 Oskarshamn
 oskarshamnsbo
@@ -22428,8 +22302,6 @@ oststänger
 ostvassla
 ostämne
 ostördhet
-osynliggjort
-osynliggöra
 osynlighet
 osäkerhet
 osämja
@@ -25198,13 +25070,11 @@ remsläsare
 remstycke
 remtransportör
 remtyg
-rena
 renare
 renbete
 renbetesland
 renbog
 renegat
-rengöra
 rengörare
 rengöring
 renhet
@@ -25224,7 +25094,6 @@ renlärighet
 renommé
 renovering
 renrasighet
-rensa
 rensare
 rensbrunn
 renseri
@@ -28887,15 +28756,8 @@ smutsvatten
 smutt
 smutta
 smuttning
-cke
-ckeskrin
-g
-gande
-gare
-ghandel
-gsupare
-gvinkel
-gäta
+smycke
+smyckeskrin
 småaktighet
 småanmärkning
 småbarn
@@ -31876,16 +31738,13 @@ tillförlitlighet
 tillförsel
 tillförsikt
 tillgivenhet
-tillgodogöra
 tillgodohavande
 tillgång
-tillgängliggör
 tillgänglighet
 tillhandagå
 tillhygge
 tillhåll
 tillhörighet
-tillintetgöra
 tillintetgörelse
 tillit
 tillkommelse
@@ -32122,7 +31981,6 @@ tjänstemän
 tjänsteresa
 tjänsteåliggande
 tjänsteår
-tjänstgöra
 tjänstgöring
 tjära
 tjärn
@@ -33172,7 +33030,6 @@ tyckare
 tycke
 tydande
 tydare
-tydliggöra
 tydlighet
 tydning
 tyfoidbakterie
@@ -35153,7 +35010,6 @@ verist
 verk
 verkanseld
 verkförteckning
-verkliggöra
 verklighet
 verkmästare
 verkning
