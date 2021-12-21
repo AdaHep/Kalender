@@ -1,7 +1,9 @@
 .sidebar {
+  height: fit-content;
+  padding-bottom: 2rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
   min-width: 17rem;
-  height: 90vh;
   background-color: rgb(185, 185, 185);
   border-radius: 2rem;
 }
@@ -28,6 +30,10 @@
   width: 95%;
   background-color: rgb(176, 226, 233);
   border-radius: 0.5rem;
+}
+
+#calendar-btn {
+  display: none;
 }
 
 .sidebar-todo-headline {
