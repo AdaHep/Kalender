@@ -3,7 +3,12 @@
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
 }
-.calendar-container{
+
+.month-arrow:hover {
+    color: rgb(73, 73, 196);
+}
+
+.calendar-container {
     flex-grow: 1;
     margin: 0 1rem 1rem 1rem;
 }
@@ -15,15 +20,16 @@
 .month {
     font-size: 2rem;
 }
-.calendar{
+
+.calendar {
     display: grid;
-    grid-template-columns: repeat(7,1fr);
-    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     min-height: 50rem;
     gap: 1.5px;
 }
 
-.day-name{
+.day-name {
     background-color: rgb(163, 198, 231);
     color: rgb(43, 53, 80);
     text-align: center;
@@ -34,7 +40,8 @@
 .day-card {
     background: #e6e3ff;
 }
-.day-card:hover{
+
+.day-card:hover {
     background: #f0d1d1;
 }
 
@@ -72,18 +79,18 @@
     border: 5px solid red;
 }
 
-.holiday >.day-card-bottom {
+.holiday>.day-card-bottom {
     margin-left: 1rem;
     margin-top: 1rem;
     font-size: 1rem;
     color: black;
 }
 
-.red-day > .day-card-top > .date-number > p {
+.red-day>.day-card-top>.date-number>p {
     color: red;
 }
 
-.red-day >.day-card-bottom > p {
+.red-day>.day-card-bottom>p {
     margin-top: 1rem;
     font-size: 2.5rem;
     color: red;

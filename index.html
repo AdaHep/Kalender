@@ -48,7 +48,7 @@
 
     <main class="flex">
         <div class="sidebar flex column align-center">
-            <div class="day-info" id="today" title="Gå till idag">
+            <div class="day-info" id="today" title="Gå till idag | Home">
                 <div class="date-clock align-center flex column">
                     <p id="day"></p>
                     <p id="date"></p>
@@ -61,7 +61,7 @@
                 <div class="sidebar-todo-headline flex space-around align-center justify-center">
                     <i class="fas fa-calendar" id="calendar-btn"></i>
                     <p>To do</p>
-                    <i class="fas fa-plus" id="add-todo-btn"></i>
+                    <i class="fas fa-plus" id="add-todo-btn" title="Ny todo | +"></i>
                 </div>
                 <div id="todolist"></div>
                 <div id="movingTodolist"></div>
@@ -69,11 +69,11 @@
         </div>
         <div class="calendar-container" id="calendarContainer">
             <div class="month flex space-around align-center">
-                <div id="previous-month">
+                <div id="previous-month" class="month-arrow" title="Föregående månad | ←">
                     <i class="fa-solid fa-circle-chevron-left"></i>
                 </div>
-                <p id="month-title">December</p>
-                <div id="next-month">
+                <p id="month-title" title="Vald månad">December</p>
+                <div id="next-month" class="month-arrow" title="Nästa månad | →">
                     <i class="fa-solid fa-circle-chevron-right"></i>
                 </div>
             </div>

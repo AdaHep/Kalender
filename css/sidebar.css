@@ -17,11 +17,13 @@
 #day {
   font-size: 3rem;
 }
-#today{
+
+#today {
   cursor: pointer;
   transition-duration: 350ms;
 }
-#today:hover{
+
+#today:hover {
   background-color: rgba(6, 6, 92, 0.349);
   background-color: rgba(6, 92, 35, 0.349);
   color: rgb(128, 174, 211);
@@ -54,8 +56,12 @@
   font-weight: bold;
 }
 
-.sidebar-todo-headline > i {
+.sidebar-todo-headline>i {
   font-size: 2rem;
+}
+
+#add-todo-btn:hover {
+  color: rgb(255, 217, 0);
 }
 
 .todo-item {
@@ -75,18 +81,28 @@
   font-size: 1.5rem;
 }
 
-.todo-item-icons > i {
+.todo-item-icons>i {
   margin-bottom: 0.5rem;
 }
 
-.todo-info > h5 {
+.todo-info>h5 {
   font-size: 1.2rem;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
 }
 
+.btn-delete:hover {
+  color: red;
+}
+
 .btn-move {
   width: 22px;
+  border-radius: .3rem;
+  overflow: visible;
+}
+
+.btn-move:hover {
+  background: rgb(221, 248, 255);
 }
 
 .moving {
