@@ -1,3 +1,4 @@
+let calArea;
 let calendar;
 let selectedDate = new Date();
 let selectedCard;
@@ -30,7 +31,7 @@ fetch('nouns.txt')
 
 window.onload = function () {
     // Create and render calendar
-    let calArea = document.getElementById('calArea');
+    calArea = document.getElementById('calArea');
     calendar = new Calendar(calArea);
     calendar.render(selectedDate);
     setEvents();
@@ -54,7 +55,7 @@ function numToStr(num, length) {
 
 /**
  * Get this[key]. If empty, set to def before returning.
- * @param {number} key - Index.
+ * @param {number} key
  * @param {Boolean} [addDef=false] - Given that this[key]===undefined: Whether or not to set this[key] to def.
  * @param {*} [def=new this.constructor()] - Default value to add if this[i] is empty.
  * @returns {*} - this[key] or def
@@ -68,7 +69,7 @@ Object.prototype.magicGet = function (key, addDef = false, def = new this.constr
     return val;
 }
 
-
+/** Get a randomly selected element. */
 Array.prototype.getRandom = function () {
     return this[Math.floor(Math.random() * this.length)];
 }

@@ -6,6 +6,7 @@
   min-width: 17rem;
   background-color: rgb(210, 238, 255);
   border-radius: 2rem;
+  overflow: hidden;
 }
 
 .day-info {
@@ -15,6 +16,17 @@
 
 #day {
   font-size: 3rem;
+}
+#today{
+  cursor: pointer;
+  transition-duration: 350ms;
+}
+#today:hover{
+  background-color: rgba(6, 6, 92, 0.349);
+  background-color: rgba(6, 92, 35, 0.349);
+  color: rgb(128, 174, 211);
+  color: rgb(200, 238, 188);
+  transition-duration: 200ms;
 }
 
 #date {

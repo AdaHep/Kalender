@@ -7681,8 +7681,6 @@ flush
 flussmedel
 fluster
 flusterbräde
-fly
-flyende
 flyg
 flygare
 flygbild
@@ -27467,7 +27465,6 @@ skärva
 skärverktyg
 skärvinkel
 skärvätska
-sköka
 sköld
 sköldbrosk
 sköldemärke
@@ -27596,11 +27593,8 @@ slamkorn
 slamkrypare
 slammer
 slamning
-slampa
-slampighet
 slampump
 slamrör
-slamsa
 slamsugare
 slamsugning
 slamvulkan

@@ -27,6 +27,7 @@ class DayCard {
         );
         this.htmlElement = document.getElementById(id);
         this.htmlElement["data-card"] = this;
+        if(this.date.isToday())this.htmlElement.classList.add('current');
         this.htmlElement.addEventListener("click", function () {
             this["data-card"].select();
         });

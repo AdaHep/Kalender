@@ -25,6 +25,14 @@ Date.prototype.getDayOfDate = function (dateNum) {
     let d = new Date(this.getFullYear(), this.getMonth(), dateNum);
     return d.getDay();
 }
+/**
+ * Find out if this is today.
+ * @returns {boolean} - True if this is today, otherwise false.
+ */
+Date.prototype.isToday = function () {
+    const today = new Date();
+    return this.getFullYear() === today.getFullYear() && this.getMonth() === today.getMonth() && this.getDate() === today.getDate();
+}
 
 /**
  * Extracts year, month, date, day, hours and minutes into an object.

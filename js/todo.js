@@ -42,22 +42,32 @@ class Todo extends Object {
         //Make sure the html element knows which Todo object it refers to
         htmlElement['data-obj'] = this;
 
+        let nameEl=htmlElement.getElementsByClassName('name')[0];
         //Event to change name of todo
-        htmlElement.getElementsByClassName('name')[0].addEventListener('change', function () {
+        nameEl.addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             todo.name = this.value;
             calendar.saveToLS();
         });
-
+        //Don't trigger hotkeys when editing
+        nameEl.addEventListener('keydown', function(e){
+            e.stopPropagation();
+        });
+        
+        let timeEl = htmlElement.getElementsByClassName('time')[0];
         //Event to change time of todo
-        htmlElement.getElementsByClassName('time')[0].addEventListener('change', function () {
+        timeEl.addEventListener('change', function () {
             let todo = this.closest('.todo-item')['data-obj'];
             let [hours, minutes] = this.value.split(':');
             todo.date.setHours(hours);
             todo.date.setMinutes(minutes);
             calendar.saveToLS();
         });
-
+        //Don't trigger hotkeys when editing
+        timeEl.addEventListener('keydown', function(e){
+            e.stopPropagation();
+        });
+        
         //Event to delete todo
         htmlElement.getElementsByClassName('btn-delete')[0].addEventListener('click', function () {
             let todo = this.closest('.todo-item')['data-obj'];
