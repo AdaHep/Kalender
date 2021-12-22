@@ -39,10 +39,13 @@
 
 .day-card {
     background: #e6e3ff;
+    transition-duration: 1400ms;
+    transition-timing-function: ease-out;
 }
 
 .day-card:hover {
     background: #f0d1d1;
+    transition: 100ms;
 }
 
 .day-card-top {

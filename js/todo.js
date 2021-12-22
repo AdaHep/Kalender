@@ -28,11 +28,11 @@ class Todo extends Object {
         todolist.insertAdjacentHTML('beforeend',
             '   <div id="' + id + '" class="' + classes + '">' +
             '       <div class="todo-info flex justify-center column text-center">' +
-            '           <p class="todo-date">' + dateStr + ' | <input type="time" class="time" value="' + timeStr + '"></p>' +
-            '           <input type="text" class="name" value="' + this.name + '">' +
+            '           <p class="todo-date">' + dateStr + ' | <input type="time" class="time" value="' + timeStr + '" title="Ändra tid"></p>' +
+            '           <input type="text" class="name" value="' + this.name + '" title="Ändra namn">' +
             '       </div>' +
             '       <div class="todo-item-icons flex column space-around">' +
-            '           <i class="far fa-trash-alt btn-delete"></i>' +
+            '           <i class="far fa-trash-alt btn-delete" title="Ta bort"></i>' +
             '           <img class="btn-move" src="./icons/edit-date.svg" alt="ändra datum" title="Flytta till annat datum">' +
             '       </div>' +
             '   </div>'

@@ -20,14 +20,12 @@
 
 #today {
   cursor: pointer;
-  transition-duration: 350ms;
+  transition-duration: 550ms;
 }
 
 #today:hover {
-  background-color: rgba(6, 6, 92, 0.349);
-  background-color: rgba(6, 92, 35, 0.349);
-  color: rgb(128, 174, 211);
-  color: rgb(200, 238, 188);
+  background-color: rgb(224, 245, 255);
+  color: rgb(39, 122, 14);
   transition-duration: 200ms;
 }
 
