@@ -20789,7 +20789,6 @@ nödlån
 nödläge
 nödlögn
 nödlösning
-nt
 nödnummer
 nödraket
 nödrim
@@ -20872,7 +20871,6 @@ objektsform
 oblat
 obligation
 obligatorium
-oboe
 oboist
 obotfärdighet
 obotlighet
@@ -21315,7 +21313,6 @@ omkörningsfil
 omladdning
 omlade
 omlagring
-omlagt
 omlastning
 omlindning
 omljud
@@ -21371,7 +21368,6 @@ omsegling
 omskakning
 omskapare
 omskapelse
-omskar
 omskiftare
 omskiftning
 omskjutning
@@ -21558,12 +21554,10 @@ organisatör
 organisering
 organism
 organist
-orgasm
 orgel
 orgelmusik
 orgelton
 orgeltrampare
-orgie
 oriental
 orientalism
 orientalist
